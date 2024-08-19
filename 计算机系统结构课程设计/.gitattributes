@@ -1,0 +1,5 @@
+EXP1 filter=lfs diff=lfs merge=lfs -text
+EXP2 filter=lfs diff=lfs merge=lfs -text
+EXP3 filter=lfs diff=lfs merge=lfs -text
+自己动手写CPU.zip filter=lfs diff=lfs merge=lfs -text
+计算机系统实验课程介绍(202402)[[:space:]].pdf filter=lfs diff=lfs merge=lfs -text
