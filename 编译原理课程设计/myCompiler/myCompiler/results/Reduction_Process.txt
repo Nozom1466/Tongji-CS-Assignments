@@ -1,0 +1,3240 @@
+STEP: 1
+SYMBOL_STACK:  #
+STATUS_STACK: 0
+SHIFT_SYMBOL:  int
+INPUT: intprogram(inta,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <N>-->空  ]
+
+STEP: 2
+SYMBOL_STACK:  #,<N>
+STATUS_STACK: 0,2
+SHIFT_SYMBOL:  int
+INPUT: intprogram(inta,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 3
+SYMBOL_STACK:  #,<N>,int
+STATUS_STACK: 0,2,5
+SHIFT_SYMBOL:  ID
+INPUT: program(inta,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 4
+SYMBOL_STACK:  #,<N>,int,ID
+STATUS_STACK: 0,2,5,9
+SHIFT_SYMBOL:  (
+INPUT: (inta,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 5
+SYMBOL_STACK:  #,<N>,int,ID,<M>
+STATUS_STACK: 0,2,5,9,12
+SHIFT_SYMBOL:  (
+INPUT: (inta,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <A>-->空  ]
+
+STEP: 6
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>
+STATUS_STACK: 0,2,5,9,12,15
+SHIFT_SYMBOL:  (
+INPUT: (inta,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 7
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(
+STATUS_STACK: 0,2,5,9,12,15,22
+SHIFT_SYMBOL:  int
+INPUT: inta,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 8
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,int
+STATUS_STACK: 0,2,5,9,12,15,22,29
+SHIFT_SYMBOL:  ID
+INPUT: a,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 9
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,int,ID
+STATUS_STACK: 0,2,5,9,12,15,22,29,34
+SHIFT_SYMBOL:  ,
+INPUT: ,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <参数>-->int ID  ]
+
+STEP: 10
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>
+STATUS_STACK: 0,2,5,9,12,15,22,28
+SHIFT_SYMBOL:  ,
+INPUT: ,intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 11
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,
+STATUS_STACK: 0,2,5,9,12,15,22,28,33
+SHIFT_SYMBOL:  int
+INPUT: intb,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 12
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,,int
+STATUS_STACK: 0,2,5,9,12,15,22,28,33,29
+SHIFT_SYMBOL:  ID
+INPUT: b,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 13
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,,int,ID
+STATUS_STACK: 0,2,5,9,12,15,22,28,33,29,34
+SHIFT_SYMBOL:  ,
+INPUT: ,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <参数>-->int ID  ]
+
+STEP: 14
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,,<参数>
+STATUS_STACK: 0,2,5,9,12,15,22,28,33,38
+SHIFT_SYMBOL:  ,
+INPUT: ,intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 15
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,,<参数>,,
+STATUS_STACK: 0,2,5,9,12,15,22,28,33,38,33
+SHIFT_SYMBOL:  int
+INPUT: intc){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 16
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,,<参数>,,,int
+STATUS_STACK: 0,2,5,9,12,15,22,28,33,38,33,29
+SHIFT_SYMBOL:  ID
+INPUT: c){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 17
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,,<参数>,,,int,ID
+STATUS_STACK: 0,2,5,9,12,15,22,28,33,38,33,29,34
+SHIFT_SYMBOL:  )
+INPUT: ){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <参数>-->int ID  ]
+
+STEP: 18
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,,<参数>,,,<参数>
+STATUS_STACK: 0,2,5,9,12,15,22,28,33,38,33,38
+SHIFT_SYMBOL:  )
+INPUT: ){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <逗号和参数>-->空  ]
+
+STEP: 19
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,,<参数>,,,<参数>,<逗号和参数>
+STATUS_STACK: 0,2,5,9,12,15,22,28,33,38,33,38,44
+SHIFT_SYMBOL:  )
+INPUT: ){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <逗号和参数>-->, <参数> <逗号和参数>  ]
+
+STEP: 20
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,,,<参数>,<逗号和参数>
+STATUS_STACK: 0,2,5,9,12,15,22,28,33,38,44
+SHIFT_SYMBOL:  )
+INPUT: ){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <逗号和参数>-->, <参数> <逗号和参数>  ]
+
+STEP: 21
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数>,<逗号和参数>
+STATUS_STACK: 0,2,5,9,12,15,22,28,32
+SHIFT_SYMBOL:  )
+INPUT: ){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <参数列表>--><参数> <逗号和参数>  ]
+
+STEP: 22
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<参数列表>
+STATUS_STACK: 0,2,5,9,12,15,22,26
+SHIFT_SYMBOL:  )
+INPUT: ){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <形参>--><参数列表>  ]
+
+STEP: 23
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>
+STATUS_STACK: 0,2,5,9,12,15,22,25
+SHIFT_SYMBOL:  )
+INPUT: ){inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 24
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,)
+STATUS_STACK: 0,2,5,9,12,15,22,25,31
+SHIFT_SYMBOL:  {
+INPUT: {inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 25
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37
+SHIFT_SYMBOL:  int
+INPUT: inti;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 26
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,int
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,42
+SHIFT_SYMBOL:  ID
+INPUT: i;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 27
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,int,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,42,57
+SHIFT_SYMBOL:  ;
+INPUT: ;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部变量声明>-->int ID  ]
+
+STEP: 28
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部变量声明>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,40
+SHIFT_SYMBOL:  ;
+INPUT: ;intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 29
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部变量声明>,;
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,40,55
+SHIFT_SYMBOL:  int
+INPUT: intj;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 30
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部变量声明>,;,int
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,40,55,42
+SHIFT_SYMBOL:  ID
+INPUT: j;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 31
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部变量声明>,;,int,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,40,55,42,57
+SHIFT_SYMBOL:  ;
+INPUT: ;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部变量声明>-->int ID  ]
+
+STEP: 32
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部变量声明>,;,<内部变量声明>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,40,55,40
+SHIFT_SYMBOL:  ;
+INPUT: ;i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 33
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部变量声明>,;,<内部变量声明>,;
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,40,55,40,55
+SHIFT_SYMBOL:  ID
+INPUT: i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部声明>-->空  ]
+
+STEP: 34
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部变量声明>,;,<内部变量声明>,;,<内部声明>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,40,55,40,55,74
+SHIFT_SYMBOL:  ID
+INPUT: i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部声明>--><内部变量声明> ; <内部声明>  ]
+
+STEP: 35
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部变量声明>,;,<内部声明>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,40,55,74
+SHIFT_SYMBOL:  ID
+INPUT: i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部声明>--><内部变量声明> ; <内部声明>  ]
+
+STEP: 36
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39
+SHIFT_SYMBOL:  ID
+INPUT: i=0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 37
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,54
+SHIFT_SYMBOL:  =
+INPUT: =0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 38
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,54,71
+SHIFT_SYMBOL:  num
+INPUT: 0;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 39
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,num
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,54,71,68
+SHIFT_SYMBOL:  ;
+INPUT: ;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->num  ]
+
+STEP: 40
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,54,71,67
+SHIFT_SYMBOL:  ;
+INPUT: ;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 41
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,54,71,66
+SHIFT_SYMBOL:  ;
+INPUT: ;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 42
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,54,71,65
+SHIFT_SYMBOL:  ;
+INPUT: ;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 43
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,54,71,103
+SHIFT_SYMBOL:  ;
+INPUT: ;if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 44
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<表达式>,;
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,54,71,103,139
+SHIFT_SYMBOL:  if
+INPUT: if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <赋值语句>-->ID = <表达式> ;  ]
+
+STEP: 45
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<赋值语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,50
+SHIFT_SYMBOL:  if
+INPUT: if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 46
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46
+SHIFT_SYMBOL:  if
+INPUT: if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 47
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60
+SHIFT_SYMBOL:  if
+INPUT: if(a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 48
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51
+SHIFT_SYMBOL:  (
+INPUT: (a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 49
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61
+SHIFT_SYMBOL:  ID
+INPUT: a>(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 50
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,85
+SHIFT_SYMBOL:  >
+INPUT: >(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 51
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,82
+SHIFT_SYMBOL:  >
+INPUT: >(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 52
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,81
+SHIFT_SYMBOL:  >
+INPUT: >(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 53
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80
+SHIFT_SYMBOL:  >
+INPUT: >(b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 54
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,91
+SHIFT_SYMBOL:  (
+INPUT: (b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <relop>-->>  ]
+
+STEP: 55
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108
+SHIFT_SYMBOL:  (
+INPUT: (b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 56
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148
+SHIFT_SYMBOL:  ID
+INPUT: b+c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 57
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,85
+SHIFT_SYMBOL:  +
+INPUT: +c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 58
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,82
+SHIFT_SYMBOL:  +
+INPUT: +c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 59
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,81
+SHIFT_SYMBOL:  +
+INPUT: +c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 60
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<项>,+
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,81,109
+SHIFT_SYMBOL:  ID
+INPUT: c)){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 61
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<项>,+,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,81,109,85
+SHIFT_SYMBOL:  )
+INPUT: )){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 62
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<项>,+,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,81,109,82
+SHIFT_SYMBOL:  )
+INPUT: )){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 63
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<项>,+,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,81,109,151
+SHIFT_SYMBOL:  )
+INPUT: )){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 64
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<项>,+,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,81,109,150
+SHIFT_SYMBOL:  )
+INPUT: )){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项> + <加法表达式>  ]
+
+STEP: 65
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,80
+SHIFT_SYMBOL:  )
+INPUT: )){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 66
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,188
+SHIFT_SYMBOL:  )
+INPUT: )){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 67
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,(,<表达式>,)
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,148,188,224
+SHIFT_SYMBOL:  )
+INPUT: ){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->( <表达式> )  ]
+
+STEP: 68
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,146
+SHIFT_SYMBOL:  )
+INPUT: ){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 69
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,145
+SHIFT_SYMBOL:  )
+INPUT: ){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 70
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<加法表达式>,<relop>,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,80,108,144
+SHIFT_SYMBOL:  )
+INPUT: ){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式> <relop> <加法表达式>  ]
+
+STEP: 71
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79
+SHIFT_SYMBOL:  )
+INPUT: ){j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 72
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,)
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107
+SHIFT_SYMBOL:  {
+INPUT: {j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <A>-->空  ]
+
+STEP: 73
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143
+SHIFT_SYMBOL:  {
+INPUT: {j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 74
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183
+SHIFT_SYMBOL:  ID
+INPUT: j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部声明>-->空  ]
+
+STEP: 75
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219
+SHIFT_SYMBOL:  ID
+INPUT: j=a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 76
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54
+SHIFT_SYMBOL:  =
+INPUT: =a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 77
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71
+SHIFT_SYMBOL:  ID
+INPUT: a+(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 78
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,70
+SHIFT_SYMBOL:  +
+INPUT: +(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 79
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,67
+SHIFT_SYMBOL:  +
+INPUT: +(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 80
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66
+SHIFT_SYMBOL:  +
+INPUT: +(b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 81
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95
+SHIFT_SYMBOL:  (
+INPUT: (b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 82
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69
+SHIFT_SYMBOL:  ID
+INPUT: b*c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 83
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,85
+SHIFT_SYMBOL:  *
+INPUT: *c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 84
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,82
+SHIFT_SYMBOL:  *
+INPUT: *c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 85
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<因子>,*
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,82,111
+SHIFT_SYMBOL:  ID
+INPUT: c+1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 86
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<因子>,*,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,82,111,85
+SHIFT_SYMBOL:  +
+INPUT: +1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 87
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<因子>,*,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,82,111,82
+SHIFT_SYMBOL:  +
+INPUT: +1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 88
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<因子>,*,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,82,111,153
+SHIFT_SYMBOL:  +
+INPUT: +1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子> * <项>  ]
+
+STEP: 89
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,81
+SHIFT_SYMBOL:  +
+INPUT: +1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 90
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<项>,+
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,81,109
+SHIFT_SYMBOL:  num
+INPUT: 1);}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 91
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<项>,+,num
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,81,109,83
+SHIFT_SYMBOL:  )
+INPUT: );}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->num  ]
+
+STEP: 92
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<项>,+,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,81,109,82
+SHIFT_SYMBOL:  )
+INPUT: );}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 93
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<项>,+,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,81,109,151
+SHIFT_SYMBOL:  )
+INPUT: );}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 94
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<项>,+,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,81,109,150
+SHIFT_SYMBOL:  )
+INPUT: );}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项> + <加法表达式>  ]
+
+STEP: 95
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,80
+SHIFT_SYMBOL:  )
+INPUT: );}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 96
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,99
+SHIFT_SYMBOL:  )
+INPUT: );}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 97
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,(,<表达式>,)
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,69,99,129
+SHIFT_SYMBOL:  ;
+INPUT: ;}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->( <表达式> )  ]
+
+STEP: 98
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,67
+SHIFT_SYMBOL:  ;
+INPUT: ;}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 99
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,125
+SHIFT_SYMBOL:  ;
+INPUT: ;}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 100
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>,+,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,66,95,124
+SHIFT_SYMBOL:  ;
+INPUT: ;}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项> + <加法表达式>  ]
+
+STEP: 101
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,65
+SHIFT_SYMBOL:  ;
+INPUT: ;}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 102
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,103
+SHIFT_SYMBOL:  ;
+INPUT: ;}else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 103
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,ID,=,<表达式>,;
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,54,71,103,139
+SHIFT_SYMBOL:  }
+INPUT: }else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <赋值语句>-->ID = <表达式> ;  ]
+
+STEP: 104
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,<赋值语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,50
+SHIFT_SYMBOL:  }
+INPUT: }else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 105
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,<语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,46
+SHIFT_SYMBOL:  }
+INPUT: }else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 106
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,46,60
+SHIFT_SYMBOL:  }
+INPUT: }else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M>  ]
+
+STEP: 107
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,<语句串>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,243
+SHIFT_SYMBOL:  }
+INPUT: }else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 108
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,{,<内部声明>,<语句串>,}
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,183,219,243,257
+SHIFT_SYMBOL:  else
+INPUT: else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句块>-->{ <内部声明> <语句串> }  ]
+
+STEP: 109
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182
+SHIFT_SYMBOL:  else
+INPUT: else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <N>-->空  ]
+
+STEP: 110
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218
+SHIFT_SYMBOL:  else
+INPUT: else{j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 111
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242
+SHIFT_SYMBOL:  {
+INPUT: {j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 112
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256
+SHIFT_SYMBOL:  {
+INPUT: {j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <A>-->空  ]
+
+STEP: 113
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262
+SHIFT_SYMBOL:  {
+INPUT: {j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 114
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229
+SHIFT_SYMBOL:  ID
+INPUT: j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部声明>-->空  ]
+
+STEP: 115
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246
+SHIFT_SYMBOL:  ID
+INPUT: j=a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 116
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,54
+SHIFT_SYMBOL:  =
+INPUT: =a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 117
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,ID,=
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,54,71
+SHIFT_SYMBOL:  ID
+INPUT: a;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 118
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,ID,=,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,54,71,70
+SHIFT_SYMBOL:  ;
+INPUT: ;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 119
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,ID,=,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,54,71,67
+SHIFT_SYMBOL:  ;
+INPUT: ;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 120
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,ID,=,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,54,71,66
+SHIFT_SYMBOL:  ;
+INPUT: ;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 121
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,ID,=,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,54,71,65
+SHIFT_SYMBOL:  ;
+INPUT: ;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 122
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,ID,=,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,54,71,103
+SHIFT_SYMBOL:  ;
+INPUT: ;}while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 123
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,ID,=,<表达式>,;
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,54,71,103,139
+SHIFT_SYMBOL:  }
+INPUT: }while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <赋值语句>-->ID = <表达式> ;  ]
+
+STEP: 124
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,<赋值语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,50
+SHIFT_SYMBOL:  }
+INPUT: }while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 125
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,<语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,46
+SHIFT_SYMBOL:  }
+INPUT: }while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 126
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,<语句>,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,46,60
+SHIFT_SYMBOL:  }
+INPUT: }while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M>  ]
+
+STEP: 127
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,<语句串>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,259
+SHIFT_SYMBOL:  }
+INPUT: }while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 128
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,{,<内部声明>,<语句串>,}
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,229,246,259,263
+SHIFT_SYMBOL:  while
+INPUT: while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句块>-->{ <内部声明> <语句串> }  ]
+
+STEP: 129
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,if,(,<表达式>,),<A>,<语句块>,<N>,else,<M>,<A>,<语句块>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,51,61,79,107,143,182,218,242,256,262,265
+SHIFT_SYMBOL:  while
+INPUT: while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <if语句>-->if ( <表达式> ) <A> <语句块> <N> else <M> <A> <语句块>  ]
+
+STEP: 130
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<if语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,47
+SHIFT_SYMBOL:  while
+INPUT: while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><if语句>  ]
+
+STEP: 131
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46
+SHIFT_SYMBOL:  while
+INPUT: while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 132
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60
+SHIFT_SYMBOL:  while
+INPUT: while(i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 133
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52
+SHIFT_SYMBOL:  (
+INPUT: (i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 134
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62
+SHIFT_SYMBOL:  (
+INPUT: (i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 135
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86
+SHIFT_SYMBOL:  ID
+INPUT: i<=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 136
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,85
+SHIFT_SYMBOL:  <=
+INPUT: <=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 137
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,82
+SHIFT_SYMBOL:  <=
+INPUT: <=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 138
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,81
+SHIFT_SYMBOL:  <=
+INPUT: <=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 139
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,80
+SHIFT_SYMBOL:  <=
+INPUT: <=100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 140
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<加法表达式>,<=
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,80,90
+SHIFT_SYMBOL:  num
+INPUT: 100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <relop>--><=  ]
+
+STEP: 141
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<加法表达式>,<relop>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,80,108
+SHIFT_SYMBOL:  num
+INPUT: 100){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 142
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<加法表达式>,<relop>,num
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,80,108,147
+SHIFT_SYMBOL:  )
+INPUT: ){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->num  ]
+
+STEP: 143
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<加法表达式>,<relop>,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,80,108,146
+SHIFT_SYMBOL:  )
+INPUT: ){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 144
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<加法表达式>,<relop>,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,80,108,145
+SHIFT_SYMBOL:  )
+INPUT: ){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 145
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<加法表达式>,<relop>,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,80,108,144
+SHIFT_SYMBOL:  )
+INPUT: ){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式> <relop> <加法表达式>  ]
+
+STEP: 146
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117
+SHIFT_SYMBOL:  )
+INPUT: ){i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 147
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,)
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158
+SHIFT_SYMBOL:  {
+INPUT: {i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <A>-->空  ]
+
+STEP: 148
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194
+SHIFT_SYMBOL:  {
+INPUT: {i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 149
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229
+SHIFT_SYMBOL:  ID
+INPUT: i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部声明>-->空  ]
+
+STEP: 150
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246
+SHIFT_SYMBOL:  ID
+INPUT: i=j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 151
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54
+SHIFT_SYMBOL:  =
+INPUT: =j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 152
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71
+SHIFT_SYMBOL:  ID
+INPUT: j*2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 153
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,70
+SHIFT_SYMBOL:  *
+INPUT: *2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 154
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,67
+SHIFT_SYMBOL:  *
+INPUT: *2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 155
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,<因子>,*
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,67,97
+SHIFT_SYMBOL:  num
+INPUT: 2;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 156
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,<因子>,*,num
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,67,97,68
+SHIFT_SYMBOL:  ;
+INPUT: ;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->num  ]
+
+STEP: 157
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,<因子>,*,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,67,97,67
+SHIFT_SYMBOL:  ;
+INPUT: ;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 158
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,<因子>,*,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,67,97,127
+SHIFT_SYMBOL:  ;
+INPUT: ;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子> * <项>  ]
+
+STEP: 159
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,66
+SHIFT_SYMBOL:  ;
+INPUT: ;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 160
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,65
+SHIFT_SYMBOL:  ;
+INPUT: ;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 161
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,103
+SHIFT_SYMBOL:  ;
+INPUT: ;j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 162
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,ID,=,<表达式>,;
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,54,71,103,139
+SHIFT_SYMBOL:  ID
+INPUT: j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <赋值语句>-->ID = <表达式> ;  ]
+
+STEP: 163
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<赋值语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,50
+SHIFT_SYMBOL:  ID
+INPUT: j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 164
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46
+SHIFT_SYMBOL:  ID
+INPUT: j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 165
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60
+SHIFT_SYMBOL:  ID
+INPUT: j=j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 166
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54
+SHIFT_SYMBOL:  =
+INPUT: =j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 167
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71
+SHIFT_SYMBOL:  ID
+INPUT: j+1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 168
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,70
+SHIFT_SYMBOL:  +
+INPUT: +1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 169
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,67
+SHIFT_SYMBOL:  +
+INPUT: +1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 170
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,66
+SHIFT_SYMBOL:  +
+INPUT: +1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 171
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<项>,+
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,66,95
+SHIFT_SYMBOL:  num
+INPUT: 1;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 172
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<项>,+,num
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,66,95,68
+SHIFT_SYMBOL:  ;
+INPUT: ;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->num  ]
+
+STEP: 173
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<项>,+,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,66,95,67
+SHIFT_SYMBOL:  ;
+INPUT: ;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 174
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<项>,+,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,66,95,125
+SHIFT_SYMBOL:  ;
+INPUT: ;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 175
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<项>,+,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,66,95,124
+SHIFT_SYMBOL:  ;
+INPUT: ;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项> + <加法表达式>  ]
+
+STEP: 176
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,65
+SHIFT_SYMBOL:  ;
+INPUT: ;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 177
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,103
+SHIFT_SYMBOL:  ;
+INPUT: ;}returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 178
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,ID,=,<表达式>,;
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,54,71,103,139
+SHIFT_SYMBOL:  }
+INPUT: }returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <赋值语句>-->ID = <表达式> ;  ]
+
+STEP: 179
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,<赋值语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,50
+SHIFT_SYMBOL:  }
+INPUT: }returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 180
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,<语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,46
+SHIFT_SYMBOL:  }
+INPUT: }returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 181
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,<语句>,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,46,60
+SHIFT_SYMBOL:  }
+INPUT: }returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M>  ]
+
+STEP: 182
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句>,<M>,<语句串>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,46,60,78
+SHIFT_SYMBOL:  }
+INPUT: }returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M> <语句串>  ]
+
+STEP: 183
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句串>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,259
+SHIFT_SYMBOL:  }
+INPUT: }returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 184
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,{,<内部声明>,<语句串>,}
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,229,246,259,263
+SHIFT_SYMBOL:  return
+INPUT: returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句块>-->{ <内部声明> <语句串> }  ]
+
+STEP: 185
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,while,<M>,(,<表达式>,),<A>,<语句块>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,52,62,86,117,158,194,228
+SHIFT_SYMBOL:  return
+INPUT: returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <while语句>-->while <M> ( <表达式> ) <A> <语句块>  ]
+
+STEP: 186
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<while语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,48
+SHIFT_SYMBOL:  return
+INPUT: returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><while语句>  ]
+
+STEP: 187
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46
+SHIFT_SYMBOL:  return
+INPUT: returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 188
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60
+SHIFT_SYMBOL:  return
+INPUT: returni;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 189
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,return
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,53
+SHIFT_SYMBOL:  ID
+INPUT: i;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 190
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,return,ID
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,53,70
+SHIFT_SYMBOL:  ;
+INPUT: ;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 191
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,return,<因子>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,53,67
+SHIFT_SYMBOL:  ;
+INPUT: ;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 192
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,return,<项>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,53,66
+SHIFT_SYMBOL:  ;
+INPUT: ;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 193
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,return,<加法表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,53,65
+SHIFT_SYMBOL:  ;
+INPUT: ;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 194
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,return,<表达式>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,53,63
+SHIFT_SYMBOL:  ;
+INPUT: ;}intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 195
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,return,<表达式>,;
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,53,63,87
+SHIFT_SYMBOL:  }
+INPUT: }intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <return语句>-->return <表达式> ;  ]
+
+STEP: 196
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<return语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,49
+SHIFT_SYMBOL:  }
+INPUT: }intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><return语句>  ]
+
+STEP: 197
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,46
+SHIFT_SYMBOL:  }
+INPUT: }intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 198
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>,<M>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,46,60
+SHIFT_SYMBOL:  }
+INPUT: }intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M>  ]
+
+STEP: 199
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句串>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,46,60,78
+SHIFT_SYMBOL:  }
+INPUT: }intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M> <语句串>  ]
+
+STEP: 200
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句串>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,46,60,78
+SHIFT_SYMBOL:  }
+INPUT: }intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M> <语句串>  ]
+
+STEP: 201
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句串>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,46,60,78
+SHIFT_SYMBOL:  }
+INPUT: }intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M> <语句串>  ]
+
+STEP: 202
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句串>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,45
+SHIFT_SYMBOL:  }
+INPUT: }intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 203
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句串>,}
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,37,39,45,59
+SHIFT_SYMBOL:  int
+INPUT: intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句块>-->{ <内部声明> <语句串> }  ]
+
+STEP: 204
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,(,<形参>,),<语句块>
+STATUS_STACK: 0,2,5,9,12,15,22,25,31,36
+SHIFT_SYMBOL:  int
+INPUT: intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <函数声明>-->( <形参> ) <语句块>  ]
+
+STEP: 205
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,<函数声明>
+STATUS_STACK: 0,2,5,9,12,15,20
+SHIFT_SYMBOL:  int
+INPUT: intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <声明类型>--><函数声明>  ]
+
+STEP: 206
+SYMBOL_STACK:  #,<N>,int,ID,<M>,<A>,<声明类型>
+STATUS_STACK: 0,2,5,9,12,15,18
+SHIFT_SYMBOL:  int
+INPUT: intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <声明>-->int ID <M> <A> <声明类型>  ]
+
+STEP: 207
+SYMBOL_STACK:  #,<N>,<声明>
+STATUS_STACK: 0,2,4
+SHIFT_SYMBOL:  int
+INPUT: intdemo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 208
+SYMBOL_STACK:  #,<N>,<声明>,int
+STATUS_STACK: 0,2,4,5
+SHIFT_SYMBOL:  ID
+INPUT: demo(inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 209
+SYMBOL_STACK:  #,<N>,<声明>,int,ID
+STATUS_STACK: 0,2,4,5,9
+SHIFT_SYMBOL:  (
+INPUT: (inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 210
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>
+STATUS_STACK: 0,2,4,5,9,12
+SHIFT_SYMBOL:  (
+INPUT: (inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <A>-->空  ]
+
+STEP: 211
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>
+STATUS_STACK: 0,2,4,5,9,12,15
+SHIFT_SYMBOL:  (
+INPUT: (inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 212
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(
+STATUS_STACK: 0,2,4,5,9,12,15,22
+SHIFT_SYMBOL:  int
+INPUT: inta){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 213
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,int
+STATUS_STACK: 0,2,4,5,9,12,15,22,29
+SHIFT_SYMBOL:  ID
+INPUT: a){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 214
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,int,ID
+STATUS_STACK: 0,2,4,5,9,12,15,22,29,34
+SHIFT_SYMBOL:  )
+INPUT: ){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <参数>-->int ID  ]
+
+STEP: 215
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<参数>
+STATUS_STACK: 0,2,4,5,9,12,15,22,28
+SHIFT_SYMBOL:  )
+INPUT: ){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <逗号和参数>-->空  ]
+
+STEP: 216
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<参数>,<逗号和参数>
+STATUS_STACK: 0,2,4,5,9,12,15,22,28,32
+SHIFT_SYMBOL:  )
+INPUT: ){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <参数列表>--><参数> <逗号和参数>  ]
+
+STEP: 217
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<参数列表>
+STATUS_STACK: 0,2,4,5,9,12,15,22,26
+SHIFT_SYMBOL:  )
+INPUT: ){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <形参>--><参数列表>  ]
+
+STEP: 218
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25
+SHIFT_SYMBOL:  )
+INPUT: ){a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 219
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,)
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31
+SHIFT_SYMBOL:  {
+INPUT: {a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 220
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37
+SHIFT_SYMBOL:  ID
+INPUT: a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部声明>-->空  ]
+
+STEP: 221
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39
+SHIFT_SYMBOL:  ID
+INPUT: a=a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 222
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54
+SHIFT_SYMBOL:  =
+INPUT: =a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 223
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71
+SHIFT_SYMBOL:  ID
+INPUT: a+2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 224
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,ID
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,70
+SHIFT_SYMBOL:  +
+INPUT: +2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 225
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<因子>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,67
+SHIFT_SYMBOL:  +
+INPUT: +2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 226
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<项>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,66
+SHIFT_SYMBOL:  +
+INPUT: +2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 227
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<项>,+
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,66,95
+SHIFT_SYMBOL:  num
+INPUT: 2;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 228
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<项>,+,num
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,66,95,68
+SHIFT_SYMBOL:  ;
+INPUT: ;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->num  ]
+
+STEP: 229
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<项>,+,<因子>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,66,95,67
+SHIFT_SYMBOL:  ;
+INPUT: ;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 230
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<项>,+,<项>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,66,95,125
+SHIFT_SYMBOL:  ;
+INPUT: ;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 231
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<项>,+,<加法表达式>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,66,95,124
+SHIFT_SYMBOL:  ;
+INPUT: ;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项> + <加法表达式>  ]
+
+STEP: 232
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<加法表达式>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,65
+SHIFT_SYMBOL:  ;
+INPUT: ;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 233
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<表达式>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,103
+SHIFT_SYMBOL:  ;
+INPUT: ;returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 234
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,=,<表达式>,;
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,54,71,103,139
+SHIFT_SYMBOL:  return
+INPUT: returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <赋值语句>-->ID = <表达式> ;  ]
+
+STEP: 235
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<赋值语句>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,50
+SHIFT_SYMBOL:  return
+INPUT: returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 236
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46
+SHIFT_SYMBOL:  return
+INPUT: returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 237
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60
+SHIFT_SYMBOL:  return
+INPUT: returna*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 238
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53
+SHIFT_SYMBOL:  ID
+INPUT: a*2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 239
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,ID
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,70
+SHIFT_SYMBOL:  *
+INPUT: *2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID  ]
+
+STEP: 240
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,<因子>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,67
+SHIFT_SYMBOL:  *
+INPUT: *2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 241
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,<因子>,*
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,67,97
+SHIFT_SYMBOL:  num
+INPUT: 2;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 242
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,<因子>,*,num
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,67,97,68
+SHIFT_SYMBOL:  ;
+INPUT: ;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->num  ]
+
+STEP: 243
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,<因子>,*,<因子>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,67,97,67
+SHIFT_SYMBOL:  ;
+INPUT: ;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 244
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,<因子>,*,<项>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,67,97,127
+SHIFT_SYMBOL:  ;
+INPUT: ;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子> * <项>  ]
+
+STEP: 245
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,<项>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,66
+SHIFT_SYMBOL:  ;
+INPUT: ;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 246
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,<加法表达式>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,65
+SHIFT_SYMBOL:  ;
+INPUT: ;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 247
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,<表达式>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,63
+SHIFT_SYMBOL:  ;
+INPUT: ;}voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 248
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,return,<表达式>,;
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,53,63,87
+SHIFT_SYMBOL:  }
+INPUT: }voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <return语句>-->return <表达式> ;  ]
+
+STEP: 249
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<return语句>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,49
+SHIFT_SYMBOL:  }
+INPUT: }voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><return语句>  ]
+
+STEP: 250
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,46
+SHIFT_SYMBOL:  }
+INPUT: }voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 251
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,46,60
+SHIFT_SYMBOL:  }
+INPUT: }voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M>  ]
+
+STEP: 252
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句串>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,46,60,78
+SHIFT_SYMBOL:  }
+INPUT: }voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句串>--><语句> <M> <语句串>  ]
+
+STEP: 253
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句串>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,45
+SHIFT_SYMBOL:  }
+INPUT: }voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 254
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句串>,}
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,37,39,45,59
+SHIFT_SYMBOL:  void
+INPUT: voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句块>-->{ <内部声明> <语句串> }  ]
+
+STEP: 255
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,(,<形参>,),<语句块>
+STATUS_STACK: 0,2,4,5,9,12,15,22,25,31,36
+SHIFT_SYMBOL:  void
+INPUT: voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <函数声明>-->( <形参> ) <语句块>  ]
+
+STEP: 256
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,<函数声明>
+STATUS_STACK: 0,2,4,5,9,12,15,20
+SHIFT_SYMBOL:  void
+INPUT: voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <声明类型>--><函数声明>  ]
+
+STEP: 257
+SYMBOL_STACK:  #,<N>,<声明>,int,ID,<M>,<A>,<声明类型>
+STATUS_STACK: 0,2,4,5,9,12,15,18
+SHIFT_SYMBOL:  void
+INPUT: voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <声明>-->int ID <M> <A> <声明类型>  ]
+
+STEP: 258
+SYMBOL_STACK:  #,<N>,<声明>,<声明>
+STATUS_STACK: 0,2,4,4
+SHIFT_SYMBOL:  void
+INPUT: voidmain(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 259
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void
+STATUS_STACK: 0,2,4,4,6
+SHIFT_SYMBOL:  ID
+INPUT: main(void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 260
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID
+STATUS_STACK: 0,2,4,4,6,10
+SHIFT_SYMBOL:  (
+INPUT: (void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 261
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>
+STATUS_STACK: 0,2,4,4,6,10,13
+SHIFT_SYMBOL:  (
+INPUT: (void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <A>-->空  ]
+
+STEP: 262
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>
+STATUS_STACK: 0,2,4,4,6,10,13,16
+SHIFT_SYMBOL:  (
+INPUT: (void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 263
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(
+STATUS_STACK: 0,2,4,4,6,10,13,16,22
+SHIFT_SYMBOL:  void
+INPUT: void){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 264
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,void
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,27
+SHIFT_SYMBOL:  )
+INPUT: ){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <形参>-->void  ]
+
+STEP: 265
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25
+SHIFT_SYMBOL:  )
+INPUT: ){inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 266
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,)
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31
+SHIFT_SYMBOL:  {
+INPUT: {inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 267
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37
+SHIFT_SYMBOL:  int
+INPUT: inta[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 268
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42
+SHIFT_SYMBOL:  ID
+INPUT: a[2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 269
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42,57
+SHIFT_SYMBOL:  [
+INPUT: [2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 270
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42,57,77
+SHIFT_SYMBOL:  num
+INPUT: 2][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 271
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42,57,77,106
+SHIFT_SYMBOL:  ]
+INPUT: ][2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 272
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42,57,77,106,142
+SHIFT_SYMBOL:  [
+INPUT: [2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 273
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42,57,77,106,142,77
+SHIFT_SYMBOL:  num
+INPUT: 2];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 274
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42,57,77,106,142,77,106
+SHIFT_SYMBOL:  ]
+INPUT: ];a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 275
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42,57,77,106,142,77,106,142
+SHIFT_SYMBOL:  ;
+INPUT: ;a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 276
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42,57,77,106,142,181
+SHIFT_SYMBOL:  ;
+INPUT: ;a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 277
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,int,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,42,57,76
+SHIFT_SYMBOL:  ;
+INPUT: ;a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部数组声明>-->int ID <数组>  ]
+
+STEP: 278
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部数组声明>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,41
+SHIFT_SYMBOL:  ;
+INPUT: ;a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 279
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部数组声明>,;
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,41,56
+SHIFT_SYMBOL:  ID
+INPUT: a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部声明>-->空  ]
+
+STEP: 280
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部数组声明>,;,<内部声明>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,41,56,75
+SHIFT_SYMBOL:  ID
+INPUT: a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <内部声明>--><内部数组声明> ; <内部声明>  ]
+
+STEP: 281
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39
+SHIFT_SYMBOL:  ID
+INPUT: a[0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 282
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54
+SHIFT_SYMBOL:  [
+INPUT: [0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 283
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,73
+SHIFT_SYMBOL:  num
+INPUT: 0][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 284
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,73,105
+SHIFT_SYMBOL:  ]
+INPUT: ][0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 285
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,73,105,141
+SHIFT_SYMBOL:  [
+INPUT: [0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 286
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,73,105,141,73
+SHIFT_SYMBOL:  num
+INPUT: 0]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 287
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,73,105,141,73,105
+SHIFT_SYMBOL:  ]
+INPUT: ]=3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 288
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,73,105,141,73,105,141
+SHIFT_SYMBOL:  =
+INPUT: =3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 289
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,73,105,141,180
+SHIFT_SYMBOL:  =
+INPUT: =3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 290
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,72
+SHIFT_SYMBOL:  =
+INPUT: =3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 291
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,<数组>,=
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,72,104
+SHIFT_SYMBOL:  num
+INPUT: 3;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 292
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,<数组>,=,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,72,104,68
+SHIFT_SYMBOL:  ;
+INPUT: ;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->num  ]
+
+STEP: 293
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,<数组>,=,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,72,104,67
+SHIFT_SYMBOL:  ;
+INPUT: ;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 294
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,<数组>,=,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,72,104,66
+SHIFT_SYMBOL:  ;
+INPUT: ;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 295
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,<数组>,=,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,72,104,65
+SHIFT_SYMBOL:  ;
+INPUT: ;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 296
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,<数组>,=,<表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,72,104,140
+SHIFT_SYMBOL:  ;
+INPUT: ;a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 297
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,ID,<数组>,=,<表达式>,;
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,54,72,104,140,179
+SHIFT_SYMBOL:  ID
+INPUT: a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <赋值语句>-->ID <数组> = <表达式> ;  ]
+
+STEP: 298
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<赋值语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,50
+SHIFT_SYMBOL:  ID
+INPUT: a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 299
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46
+SHIFT_SYMBOL:  ID
+INPUT: a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 300
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60
+SHIFT_SYMBOL:  ID
+INPUT: a[0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 301
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54
+SHIFT_SYMBOL:  [
+INPUT: [0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 302
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,73
+SHIFT_SYMBOL:  num
+INPUT: 0][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 303
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,73,105
+SHIFT_SYMBOL:  ]
+INPUT: ][1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 304
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,73,105,141
+SHIFT_SYMBOL:  [
+INPUT: [1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 305
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,73,105,141,73
+SHIFT_SYMBOL:  num
+INPUT: 1]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 306
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,73,105,141,73,105
+SHIFT_SYMBOL:  ]
+INPUT: ]=a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 307
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,73,105,141,73,105,141
+SHIFT_SYMBOL:  =
+INPUT: =a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 308
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,73,105,141,180
+SHIFT_SYMBOL:  =
+INPUT: =a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 309
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72
+SHIFT_SYMBOL:  =
+INPUT: =a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 310
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104
+SHIFT_SYMBOL:  ID
+INPUT: a[0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 311
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,70
+SHIFT_SYMBOL:  [
+INPUT: [0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 312
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,70,102
+SHIFT_SYMBOL:  num
+INPUT: 0][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 313
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,70,102,138
+SHIFT_SYMBOL:  ]
+INPUT: ][0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 314
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,70,102,138,178
+SHIFT_SYMBOL:  [
+INPUT: [0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 315
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,70,102,138,178,102
+SHIFT_SYMBOL:  num
+INPUT: 0]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 316
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,70,102,138,178,102,138
+SHIFT_SYMBOL:  ]
+INPUT: ]+1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 317
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,70,102,138,178,102,138,178
+SHIFT_SYMBOL:  +
+INPUT: +1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 318
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,70,102,138,178,217
+SHIFT_SYMBOL:  +
+INPUT: +1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 319
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,70,101
+SHIFT_SYMBOL:  +
+INPUT: +1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID <数组>  ]
+
+STEP: 320
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,67
+SHIFT_SYMBOL:  +
+INPUT: +1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 321
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,66
+SHIFT_SYMBOL:  +
+INPUT: +1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 322
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<项>,+
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,66,95
+SHIFT_SYMBOL:  num
+INPUT: 1;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 323
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<项>,+,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,66,95,68
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->num  ]
+
+STEP: 324
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<项>,+,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,66,95,67
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 325
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<项>,+,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,66,95,125
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 326
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<项>,+,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,66,95,124
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项> + <加法表达式>  ]
+
+STEP: 327
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,65
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 328
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,140
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 329
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,ID,<数组>,=,<表达式>,;
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,54,72,104,140,179
+SHIFT_SYMBOL:  ID
+INPUT: a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <赋值语句>-->ID <数组> = <表达式> ;  ]
+
+STEP: 330
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<赋值语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,50
+SHIFT_SYMBOL:  ID
+INPUT: a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 331
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46
+SHIFT_SYMBOL:  ID
+INPUT: a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 332
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60
+SHIFT_SYMBOL:  ID
+INPUT: a[1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 333
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54
+SHIFT_SYMBOL:  [
+INPUT: [1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 334
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,73
+SHIFT_SYMBOL:  num
+INPUT: 1][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 335
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,73,105
+SHIFT_SYMBOL:  ]
+INPUT: ][0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 336
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,73,105,141
+SHIFT_SYMBOL:  [
+INPUT: [0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 337
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,73,105,141,73
+SHIFT_SYMBOL:  num
+INPUT: 0]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 338
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,73,105,141,73,105
+SHIFT_SYMBOL:  ]
+INPUT: ]=a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 339
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,73,105,141,73,105,141
+SHIFT_SYMBOL:  =
+INPUT: =a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 340
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,73,105,141,180
+SHIFT_SYMBOL:  =
+INPUT: =a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 341
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72
+SHIFT_SYMBOL:  =
+INPUT: =a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 342
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104
+SHIFT_SYMBOL:  ID
+INPUT: a[0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 343
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,70
+SHIFT_SYMBOL:  [
+INPUT: [0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 344
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,70,102
+SHIFT_SYMBOL:  num
+INPUT: 0][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 345
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,70,102,138
+SHIFT_SYMBOL:  ]
+INPUT: ][0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 346
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,70,102,138,178
+SHIFT_SYMBOL:  [
+INPUT: [0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 347
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,70,102,138,178,102
+SHIFT_SYMBOL:  num
+INPUT: 0]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 348
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,70,102,138,178,102,138
+SHIFT_SYMBOL:  ]
+INPUT: ]+a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 349
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,70,102,138,178,102,138,178
+SHIFT_SYMBOL:  +
+INPUT: +a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 350
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,70,102,138,178,217
+SHIFT_SYMBOL:  +
+INPUT: +a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 351
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,70,101
+SHIFT_SYMBOL:  +
+INPUT: +a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID <数组>  ]
+
+STEP: 352
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,67
+SHIFT_SYMBOL:  +
+INPUT: +a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 353
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66
+SHIFT_SYMBOL:  +
+INPUT: +a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 354
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95
+SHIFT_SYMBOL:  ID
+INPUT: a[0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 355
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,70
+SHIFT_SYMBOL:  [
+INPUT: [0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 356
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,70,102
+SHIFT_SYMBOL:  num
+INPUT: 0][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 357
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,70,102,138
+SHIFT_SYMBOL:  ]
+INPUT: ][1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 358
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,70,102,138,178
+SHIFT_SYMBOL:  [
+INPUT: [1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 359
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,70,102,138,178,102
+SHIFT_SYMBOL:  num
+INPUT: 1];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 360
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,70,102,138,178,102,138
+SHIFT_SYMBOL:  ]
+INPUT: ];a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 361
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,70,102,138,178,102,138,178
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 362
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,70,102,138,178,217
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 363
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,70,101
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID <数组>  ]
+
+STEP: 364
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,67
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 365
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,125
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 366
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>,+,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,66,95,124
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项> + <加法表达式>  ]
+
+STEP: 367
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,65
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 368
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,140
+SHIFT_SYMBOL:  ;
+INPUT: ;a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 369
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<表达式>,;
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,54,72,104,140,179
+SHIFT_SYMBOL:  ID
+INPUT: a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <赋值语句>-->ID <数组> = <表达式> ;  ]
+
+STEP: 370
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<赋值语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,50
+SHIFT_SYMBOL:  ID
+INPUT: a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 371
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46
+SHIFT_SYMBOL:  ID
+INPUT: a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 372
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60
+SHIFT_SYMBOL:  ID
+INPUT: a[1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 373
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54
+SHIFT_SYMBOL:  [
+INPUT: [1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 374
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,73
+SHIFT_SYMBOL:  num
+INPUT: 1][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 375
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,73,105
+SHIFT_SYMBOL:  ]
+INPUT: ][1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 376
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,73,105,141
+SHIFT_SYMBOL:  [
+INPUT: [1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 377
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,73,105,141,73
+SHIFT_SYMBOL:  num
+INPUT: 1]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 378
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,73,105,141,73,105
+SHIFT_SYMBOL:  ]
+INPUT: ]=program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 379
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,73,105,141,73,105,141
+SHIFT_SYMBOL:  =
+INPUT: =program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 380
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,73,105,141,180
+SHIFT_SYMBOL:  =
+INPUT: =program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 381
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72
+SHIFT_SYMBOL:  =
+INPUT: =program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 382
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104
+SHIFT_SYMBOL:  ID
+INPUT: program(a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 383
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70
+SHIFT_SYMBOL:  (
+INPUT: (a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 384
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100
+SHIFT_SYMBOL:  ID
+INPUT: a[0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 385
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,137
+SHIFT_SYMBOL:  [
+INPUT: [0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 386
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,137,177
+SHIFT_SYMBOL:  num
+INPUT: 0][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 387
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,137,177,216
+SHIFT_SYMBOL:  ]
+INPUT: ][0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 388
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,137,177,216,241
+SHIFT_SYMBOL:  [
+INPUT: [0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 389
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,137,177,216,241,177
+SHIFT_SYMBOL:  num
+INPUT: 0],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 390
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,137,177,216,241,177,216
+SHIFT_SYMBOL:  ]
+INPUT: ],a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 391
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,137,177,216,241,177,216,241
+SHIFT_SYMBOL:  ,
+INPUT: ,a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 392
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,137,177,216,241,255
+SHIFT_SYMBOL:  ,
+INPUT: ,a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 393
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,137,176
+SHIFT_SYMBOL:  ,
+INPUT: ,a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID <数组>  ]
+
+STEP: 394
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,134
+SHIFT_SYMBOL:  ,
+INPUT: ,a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 395
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,133
+SHIFT_SYMBOL:  ,
+INPUT: ,a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 396
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,132
+SHIFT_SYMBOL:  ,
+INPUT: ,a[0][1],demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 397
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131
+SHIFT_SYMBOL:  ,
+INPUT: ,a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 398
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168
+SHIFT_SYMBOL:  ID
+INPUT: a[0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 399
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,137
+SHIFT_SYMBOL:  [
+INPUT: [0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 400
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,137,177
+SHIFT_SYMBOL:  num
+INPUT: 0][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 401
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,137,177,216
+SHIFT_SYMBOL:  ]
+INPUT: ][1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 402
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,137,177,216,241
+SHIFT_SYMBOL:  [
+INPUT: [1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 403
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,137,177,216,241,177
+SHIFT_SYMBOL:  num
+INPUT: 1],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 404
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,137,177,216,241,177,216
+SHIFT_SYMBOL:  ]
+INPUT: ],demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 405
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,137,177,216,241,177,216,241
+SHIFT_SYMBOL:  ,
+INPUT: ,demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 406
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,137,177,216,241,255
+SHIFT_SYMBOL:  ,
+INPUT: ,demo(a[1][0]));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 407
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,137,176
+SHIFT_SYMBOL:  ,
+INPUT: ,demo(a[1][0]));return;}#
+ACTION: 规约 :[ <因子>-->ID <数组>  ]
+
+STEP: 408
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,134
+SHIFT_SYMBOL:  ,
+INPUT: ,demo(a[1][0]));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 409
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,133
+SHIFT_SYMBOL:  ,
+INPUT: ,demo(a[1][0]));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 410
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,132
+SHIFT_SYMBOL:  ,
+INPUT: ,demo(a[1][0]));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 411
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131
+SHIFT_SYMBOL:  ,
+INPUT: ,demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 412
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168
+SHIFT_SYMBOL:  ID
+INPUT: demo(a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 413
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137
+SHIFT_SYMBOL:  (
+INPUT: (a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 414
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175
+SHIFT_SYMBOL:  ID
+INPUT: a[1][0]));return;}#
+ACTION: 移进
+
+STEP: 415
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,ID
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,137
+SHIFT_SYMBOL:  [
+INPUT: [1][0]));return;}#
+ACTION: 移进
+
+STEP: 416
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,ID,[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,137,177
+SHIFT_SYMBOL:  num
+INPUT: 1][0]));return;}#
+ACTION: 移进
+
+STEP: 417
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,ID,[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,137,177,216
+SHIFT_SYMBOL:  ]
+INPUT: ][0]));return;}#
+ACTION: 移进
+
+STEP: 418
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,ID,[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,137,177,216,241
+SHIFT_SYMBOL:  [
+INPUT: [0]));return;}#
+ACTION: 移进
+
+STEP: 419
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,ID,[,num,],[
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,137,177,216,241,177
+SHIFT_SYMBOL:  num
+INPUT: 0]));return;}#
+ACTION: 移进
+
+STEP: 420
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,ID,[,num,],[,num
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,137,177,216,241,177,216
+SHIFT_SYMBOL:  ]
+INPUT: ]));return;}#
+ACTION: 移进
+
+STEP: 421
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,ID,[,num,],[,num,]
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,137,177,216,241,177,216,241
+SHIFT_SYMBOL:  )
+INPUT: ));return;}#
+ACTION: 规约 :[ <数组>-->[ num ]  ]
+
+STEP: 422
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,ID,[,num,],<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,137,177,216,241,255
+SHIFT_SYMBOL:  )
+INPUT: ));return;}#
+ACTION: 规约 :[ <数组>-->[ num ] <数组>  ]
+
+STEP: 423
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,ID,<数组>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,137,176
+SHIFT_SYMBOL:  )
+INPUT: ));return;}#
+ACTION: 规约 :[ <因子>-->ID <数组>  ]
+
+STEP: 424
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,134
+SHIFT_SYMBOL:  )
+INPUT: ));return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 425
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,133
+SHIFT_SYMBOL:  )
+INPUT: ));return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 426
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,132
+SHIFT_SYMBOL:  )
+INPUT: ));return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 427
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,<表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,131
+SHIFT_SYMBOL:  )
+INPUT: ));return;}#
+ACTION: 规约 :[ <实参列表>--><表达式>  ]
+
+STEP: 428
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,<实参列表>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,215
+SHIFT_SYMBOL:  )
+INPUT: ));return;}#
+ACTION: 移进
+
+STEP: 429
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,ID,(,<实参列表>,)
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,137,175,215,240
+SHIFT_SYMBOL:  )
+INPUT: );return;}#
+ACTION: 规约 :[ <因子>-->ID ( <实参列表> )  ]
+
+STEP: 430
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,134
+SHIFT_SYMBOL:  )
+INPUT: );return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 431
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,133
+SHIFT_SYMBOL:  )
+INPUT: );return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 432
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,132
+SHIFT_SYMBOL:  )
+INPUT: );return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 433
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,<表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,131
+SHIFT_SYMBOL:  )
+INPUT: );return;}#
+ACTION: 规约 :[ <实参列表>--><表达式>  ]
+
+STEP: 434
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<表达式>,,,<实参列表>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,131,168,202
+SHIFT_SYMBOL:  )
+INPUT: );return;}#
+ACTION: 规约 :[ <实参列表>--><表达式> , <实参列表>  ]
+
+STEP: 435
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<表达式>,,,<实参列表>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,131,168,202
+SHIFT_SYMBOL:  )
+INPUT: );return;}#
+ACTION: 规约 :[ <实参列表>--><表达式> , <实参列表>  ]
+
+STEP: 436
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<实参列表>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,130
+SHIFT_SYMBOL:  )
+INPUT: );return;}#
+ACTION: 移进
+
+STEP: 437
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,ID,(,<实参列表>,)
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,70,100,130,167
+SHIFT_SYMBOL:  ;
+INPUT: ;return;}#
+ACTION: 规约 :[ <因子>-->ID ( <实参列表> )  ]
+
+STEP: 438
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<因子>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,67
+SHIFT_SYMBOL:  ;
+INPUT: ;return;}#
+ACTION: 规约 :[ <项>--><因子>  ]
+
+STEP: 439
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<项>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,66
+SHIFT_SYMBOL:  ;
+INPUT: ;return;}#
+ACTION: 规约 :[ <加法表达式>--><项>  ]
+
+STEP: 440
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<加法表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,65
+SHIFT_SYMBOL:  ;
+INPUT: ;return;}#
+ACTION: 规约 :[ <表达式>--><加法表达式>  ]
+
+STEP: 441
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<表达式>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,140
+SHIFT_SYMBOL:  ;
+INPUT: ;return;}#
+ACTION: 移进
+
+STEP: 442
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,ID,<数组>,=,<表达式>,;
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,54,72,104,140,179
+SHIFT_SYMBOL:  return
+INPUT: return;}#
+ACTION: 规约 :[ <赋值语句>-->ID <数组> = <表达式> ;  ]
+
+STEP: 443
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<赋值语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,50
+SHIFT_SYMBOL:  return
+INPUT: return;}#
+ACTION: 规约 :[ <语句>--><赋值语句>  ]
+
+STEP: 444
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,46
+SHIFT_SYMBOL:  return
+INPUT: return;}#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 445
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>,<M>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,46,60
+SHIFT_SYMBOL:  return
+INPUT: return;}#
+ACTION: 移进
+
+STEP: 446
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>,<M>,return
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,46,60,53
+SHIFT_SYMBOL:  ;
+INPUT: ;}#
+ACTION: 移进
+
+STEP: 447
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>,<M>,return,;
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,46,60,53,64
+SHIFT_SYMBOL:  }
+INPUT: }#
+ACTION: 规约 :[ <return语句>-->return ;  ]
+
+STEP: 448
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<return语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,46,60,49
+SHIFT_SYMBOL:  }
+INPUT: }#
+ACTION: 规约 :[ <语句>--><return语句>  ]
+
+STEP: 449
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,46,60,46
+SHIFT_SYMBOL:  }
+INPUT: }#
+ACTION: 规约 :[ <M>-->空  ]
+
+STEP: 450
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>,<M>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,46,60,46,60
+SHIFT_SYMBOL:  }
+INPUT: }#
+ACTION: 规约 :[ <语句串>--><语句> <M>  ]
+
+STEP: 451
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句串>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,46,60,78
+SHIFT_SYMBOL:  }
+INPUT: }#
+ACTION: 规约 :[ <语句串>--><语句> <M> <语句串>  ]
+
+STEP: 452
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句>,<M>,<语句串>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,46,60,78
+SHIFT_SYMBOL:  }
+INPUT: }#
+ACTION: 规约 :[ <语句串>--><语句> <M> <语句串>  ]
+
+STEP: 453
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句>,<M>,<语句串>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,46,60,78
+SHIFT_SYMBOL:  }
+INPUT: }#
+ACTION: 规约 :[ <语句串>--><语句> <M> <语句串>  ]
+
+STEP: 454
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句>,<M>,<语句串>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,46,60,78
+SHIFT_SYMBOL:  }
+INPUT: }#
+ACTION: 规约 :[ <语句串>--><语句> <M> <语句串>  ]
+
+STEP: 455
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句串>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,45
+SHIFT_SYMBOL:  }
+INPUT: }#
+ACTION: 移进
+
+STEP: 456
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),{,<内部声明>,<语句串>,}
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,37,39,45,59
+SHIFT_SYMBOL:  #
+INPUT: #
+ACTION: 规约 :[ <语句块>-->{ <内部声明> <语句串> }  ]
+
+STEP: 457
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,(,<形参>,),<语句块>
+STATUS_STACK: 0,2,4,4,6,10,13,16,22,25,31,36
+SHIFT_SYMBOL:  #
+INPUT: #
+ACTION: 规约 :[ <函数声明>-->( <形参> ) <语句块>  ]
+
+STEP: 458
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,void,ID,<M>,<A>,<函数声明>
+STATUS_STACK: 0,2,4,4,6,10,13,16,23
+SHIFT_SYMBOL:  #
+INPUT: #
+ACTION: 规约 :[ <声明>-->void ID <M> <A> <函数声明>  ]
+
+STEP: 459
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,<声明>
+STATUS_STACK: 0,2,4,4,4
+SHIFT_SYMBOL:  #
+INPUT: #
+ACTION: 规约 :[ <声明串>--><声明>  ]
+
+STEP: 460
+SYMBOL_STACK:  #,<N>,<声明>,<声明>,<声明串>
+STATUS_STACK: 0,2,4,4,8
+SHIFT_SYMBOL:  #
+INPUT: #
+ACTION: 规约 :[ <声明串>--><声明> <声明串>  ]
+
+STEP: 461
+SYMBOL_STACK:  #,<N>,<声明>,<声明串>
+STATUS_STACK: 0,2,4,8
+SHIFT_SYMBOL:  #
+INPUT: #
+ACTION: 规约 :[ <声明串>--><声明> <声明串>  ]
+
+STEP: 462
+SYMBOL_STACK:  #,<N>,<声明串>
+STATUS_STACK: 0,2,3
+SHIFT_SYMBOL:  #
+INPUT: #
+ACTION: 规约 :[ <Program>--><N> <声明串>  ]
+
+STEP: 463
+SYMBOL_STACK:  #,<Program>
+STATUS_STACK: 0,1
+SHIFT_SYMBOL:  #
+INPUT: #
+ACTION: Success!!!

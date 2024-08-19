@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>myCompilerClass</class>
+ <widget class="QMainWindow" name="myCompilerClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>748</width>
+    <height>507</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LR(1) 类 C 文法编译器</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/myCompiler/picture/icon.png</normaloff>:/myCompiler/picture/icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget {
+  background-color: #19232D;
+  border: 0px solid #455364;
+  padding: 0px;
+  color: #E0E1E3;
+  selection-background-color: #346792;
+  selection-color: #E0E1E3;
+}
+
+QWidget:disabled {
+  background-color: #19232D;
+  color: #9DA9B5;
+  selection-background-color: #26486B;
+  selection-color: #9DA9B5;
+}
+
+QWidget::item:selected {
+  background-color: #346792;
+}
+
+QWidget::item:hover:!selected {
+  background-color: #1A72BB;
+}</string>
+   </property>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>751</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QGroupBox {
+color: rgb(170, 170, 255);
+background-color: rgb(211, 249, 216);
+  font-weight: bold;
+  border: 1px solid #455364;
+  border-radius: 4px;
+  padding: 2px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+
+QGroupBox::title {
+  rgb(255, 255, 255)
+  subcontrol-origin: margin;
+  subcontrol-position: top left;
+  left: 4px;
+  padding-left: 2px;
+  padding-right: 4px;
+  padding-top: -4px;
+}
+
+QGroupBox::indicator {
+  margin-left: 2px;
+  margin-top: 2px;
+  padding: 0;
+  height: 14px;
+  width: 14px;
+}
+</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>191</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox 
+{
+	border-color: rgb(55, 178, 77);
+	color: rgb(43, 138, 62);
+	font-size: 10px;
+}
+
+QGroupBox::title 
+{
+    left: 5px;
+    top: -5px;
+}</string>
+     </property>
+     <property name="title">
+      <string>词法分析</string>
+     </property>
+     <widget class="QPushButton" name="action_DFA">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>DFA展示</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="action_Token">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>20</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>Token展示</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>191</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox 
+{
+	border-color: rgb(55, 178, 77);
+	color: rgb(43, 138, 62);
+	font-size: 10px;
+}
+
+QGroupBox::title 
+{
+    left: 5px;
+    top: -5px;
+}</string>
+     </property>
+     <property name="title">
+      <string>语法分析</string>
+     </property>
+     <widget class="QPushButton" name="action_Process">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>20</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>规约过程</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="action_Table">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>Action/Goto表</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="actionLR_1_DFA">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>项目集DFA</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="action_Tree">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>60</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>语法树</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>310</y>
+       <width>191</width>
+       <height>111</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox 
+{
+	border-color: rgb(55, 178, 77);
+	color: rgb(43, 138, 62);
+	font-size: 10px;
+}
+
+QGroupBox::title 
+{
+    left: 5px;
+    top: -5px;
+}</string>
+     </property>
+     <property name="title">
+      <string>语义分析</string>
+     </property>
+     <widget class="QPushButton" name="action_Quaternion">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>四元式生成</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="action_Func">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>函数表</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="action_Var">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>60</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>变量表</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>30</y>
+       <width>251</width>
+       <height>471</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox 
+{
+	border-color: rgb(55, 178, 77);
+	color: rgb(43, 138, 62);
+	font-size: 10px;
+}
+
+QGroupBox::title 
+{
+    left: 5px;
+    top: -5px;
+}</string>
+     </property>
+     <property name="title">
+      <string>源代码</string>
+     </property>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>231</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+  background-color: #FFFFFF;
+  color: #19232D;
+  border-radius: 4px;
+  border: 1px solid #C9CDD0;
+}
+
+QTextEdit:focus {
+  border: 1px solid #73C7FF;
+}
+
+QTextEdit:selected {
+  background: #9FCBFF;
+  color: #C9CDD0;
+}</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_6">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>191</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox 
+{
+	border-color: rgb(55, 178, 77);
+	color: rgb(43, 138, 62);
+	font-size: 10px;
+}
+
+QGroupBox::title 
+{
+    left: 5px;
+    top: -5px;
+}</string>
+     </property>
+     <property name="title">
+      <string>文件导入</string>
+     </property>
+     <widget class="QPushButton" name="action_Code">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+	cursor: pointer;
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>导入源码</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="action_Grammar">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>20</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>导入文法</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_7">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>430</y>
+       <width>191</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox 
+{
+	border-color: rgb(55, 178, 77);
+	color: rgb(43, 138, 62);
+	font-size: 10px;
+}
+
+QGroupBox::title 
+{
+    left: 5px;
+    top: -5px;
+}</string>
+     </property>
+     <property name="title">
+      <string>目标代码生成</string>
+     </property>
+     <widget class="QPushButton" name="actionMIPS_code">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+      </property>
+      <property name="text">
+       <string>汇编代码生成</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="action_Run">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>460</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+     </property>
+     <property name="text">
+      <string>开始编译</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_8">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>30</y>
+       <width>251</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox 
+{
+	border-color: rgb(55, 178, 77);
+	color: rgb(43, 138, 62);
+	font-size: 10px;
+}
+
+QGroupBox::title 
+{
+    left: 5px;
+    top: -5px;
+}</string>
+     </property>
+     <property name="title">
+      <string>终端</string>
+     </property>
+     <widget class="QTextBrowser" name="textBrowser">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>231</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>宋体</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QTextBrowser {
+	background-color: rgb(255, 255, 255);
+  
+  color: #19232D;
+  border-radius: 4px;
+  border: 1px solid #C9CDD0;
+}</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="action_Restart">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>460</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background-color: rgb(81, 207, 102);
+	padding: 3px 6px 3px 6px;
+	font-weight: 700;
+	font-size: 10px;
+	border-radius: 8px;
+	color: rgb(235, 251, 238);
+}
+
+QPushButton:hover
+{
+    background-color:rgb(140, 233, 154);
+    cursor: pointer;
+}</string>
+     </property>
+     <property name="text">
+      <string>重置输入</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <action name="action_Vartable">
+   <property name="text">
+    <string>变量表</string>
+   </property>
+  </action>
+  <action name="action_FuncTable">
+   <property name="text">
+    <string>函数表</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="myCompiler.qrc"/>
+ </resources>
+ <connections/>
+</ui>
