@@ -1,0 +1,719 @@
+<!--
+
+=========================================================
+* Volt Pro - Premium Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themesberg.com/licensing)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>海洋物质监测系统</title>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+{#    <meta name="title" content="Volt - Premium Bootstrap 5 Dashboard" />#}
+      <meta name="title" content="海洋物质监测系统" />
+    <meta name="author" content="Themesberg" />
+    <meta
+      name="description"
+      content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS."
+    />
+    <meta
+      name="keywords"
+      content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard"
+    />
+    <link
+      rel="canonical"
+      href="https://themesberg.com/product/admin-dashboard/volt-premium-bootstrap-5-dashboard"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://demo.themesberg.com/volt-pro" />
+    <meta property="og:title" content="Volt - Premium Bootstrap 5 Dashboard" />
+    <meta
+      property="og:description"
+      content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS."
+    />
+    <meta
+      property="og:image"
+      content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://demo.themesberg.com/volt-pro"
+    />
+    <meta
+      property="twitter:title"
+      content="Volt - Premium Bootstrap 5 Dashboard"
+    />
+    <meta
+      property="twitter:description"
+      content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS."
+    />
+    <meta
+      property="twitter:image"
+      content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg"
+    />
+
+
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="{% static 'assets/img/favicon/apple-touch-icon.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{% static 'assets/img/favicon/favicon-32x32.png' %}"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{% static 'assets/img/favicon/favicon-16x16.png' %}"
+    />
+    <link rel="manifest" href="{% static 'assets/img/favicon/site.webmanifest' %}" />
+    <link
+      rel="mask-icon"
+      href="{% static 'assets/img/favicon/safari-pinned-tab.svg' %}"
+      color="#ffffff"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      type="text/css"
+      href="{% static 'vendor/sweetalert2/dist/sweetalert2.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      href="{% static 'vendor/notyf/notyf.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      href="{% static 'vendor/fullcalendar/main.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      href="{% static 'vendor/apexcharts/dist/apexcharts.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      href="{% static 'vendor/dropzone/dist/min/dropzone.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      href="{% static 'vendor/choices.js/public/assets/styles/choices.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      href="{% static 'vendor/leaflet/dist/leaflet.css' %}"
+      rel="stylesheet"
+    />
+    <link type="text/css" href="{% static 'css/volt.css' %}" rel="stylesheet" />
+    <link type="text/css" href="{% static 'css/volt_extension.css' %}" rel="stylesheet" />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-141734189-6"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-141734189-6");
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-THQTXJ7");
+    </script>
+      <script>
+        var static_folder = "{% static '' %}"
+        var base_url = "{% url 'forms_source' %}"
+        var csrfmiddlewaretoken = '{{ csrf_token }}'
+    </script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-THQTXJ7"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
+      <a class="navbar-brand me-lg-5" href="../index.html"
+        ><img
+          class="navbar-brand-dark"
+          src="../assets/img/brand/light.svg"
+          alt="Volt logo" />
+        <img
+          class="navbar-brand-light"
+          src="../assets/img/brand/dark.svg"
+          alt="Volt logo"
+      /></a>
+      <div class="d-flex align-items-center">
+        <button
+          class="navbar-toggler d-lg-none collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <nav
+      id="sidebarMenu"
+      class="sidebar d-lg-block bg-gray-800 text-white collapse"
+      data-simplebar
+    >
+      <div class="sidebar-inner px-4 pt-3">
+        <div
+          class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4"
+        >
+          <div class="d-flex align-items-center">
+            <div class="avatar-lg me-4">
+              <img
+                src="{% static 'assets/img/team/profile-picture-3.jpg' %}"
+                class="card-img-top rounded-circle border-white"
+                alt="Bonnie Green"
+              />
+            </div>
+            <div class="d-block">
+              <h2 class="h5 mb-3">Hi, Jane</h2>
+              <a
+                href="../pages/examples/sign-in.html"
+                class="btn btn-secondary btn-sm d-inline-flex align-items-center"
+              >
+                <svg
+                  class="icon icon-xxs me-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                  ></path>
+                </svg>
+                Sign Out
+              </a>
+            </div>
+          </div>
+          <div class="collapse-close d-md-none">
+            <a
+              href="#sidebarMenu"
+              data-bs-toggle="collapse"
+              data-bs-target="#sidebarMenu"
+              aria-controls="sidebarMenu"
+              aria-expanded="true"
+              aria-label="Toggle navigation"
+            >
+              <svg
+                class="icon icon-xs"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <ul class="nav flex-column pt-3 pt-md-0">
+          <li class="nav-item">
+            <a
+              href="{% url 'dashboard' %}"
+              class="nav-link d-flex align-items-center"
+            >
+              <span class="sidebar-icon">
+                <img
+                  src="{% static 'assets/img/brand/light.svg' %}"
+                  height="20"
+                  width="20"
+                  alt="Volt Logo"
+                />
+              </span>
+              <span class="mt-1 ms-1 sidebar-text">海洋放射性物质检测</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'dashboard' %}" class="nav-link">
+              <span class="sidebar-icon">
+                <svg
+                  class="icon icon-xs me-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                  <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                </svg>
+              </span>
+              <span class="sidebar-text">数据分析</span>
+            </a>
+          </li>
+          <li class="nav-item" id="data-lookup">
+            <a href="{% url 'datatables' %}" class="nav-link">
+              <span class="sidebar-icon">
+                <svg
+                  class="icon icon-xs me-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <span class="sidebar-text">数据查询</span>
+            </a>
+          </li>
+          <li class="nav-item active" id="data-source">
+            <a href="{% url 'forms_source' %}" class="nav-link">
+              <span class="sidebar-icon">
+                <svg
+                  class="icon icon-xs me-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <span class="sidebar-text">放射源管理</span>
+            </a>
+          </li>
+          <li class="nav-item" id="data-review">
+            <a
+              href="{% url 'messages' %}"
+              class="nav-link d-flex align-items-center justify-content-between"
+            >
+              <span>
+                <span class="sidebar-icon">
+                  <svg
+                    class="icon icon-xs me-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"
+                    ></path>
+                    <path
+                      d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="sidebar-text">数据审核</span>
+              </span>
+{#              <span#}
+{#                class="badge badge-sm bg-danger badge-pill notification-count"#}
+{#                >4</span#}
+{#              >#}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'map' %}" class="nav-link">
+              <span class="sidebar-icon">
+                <svg
+                  class="icon icon-xs me-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <span class="sidebar-text">元素地图</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'tasks' %}"class="nav-link">
+              <span class="sidebar-icon"
+                ><svg
+                  class="icon icon-xs me-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <span class="sidebar-text">消息中心</span>
+            </a>
+          </li>
+          <li class="nav-item" id="user-manage">
+            <a href="{% url 'users' %}" class="nav-link">
+              <span class="sidebar-icon">
+                <svg
+                  class="icon icon-xs me-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
+                  ></path>
+                </svg>
+              </span>
+              <span class="sidebar-text">用户管理</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{% url 'settings' %}" class="nav-link">
+              <span class="sidebar-icon">
+                <svg
+                  class="icon icon-xs me-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <span class="sidebar-text">个人信息</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+    <main class="content">
+      <div class="py-4">
+        <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+          <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+            <li class="breadcrumb-item">
+              <a href="#"
+                ><svg
+                  class="icon icon-xxs"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  ></path></svg
+              ></a>
+            </li>
+            <li class="breadcrumb-item"><a href="#">主页面</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              放射源管理
+            </li>
+          </ol>
+        </nav>
+        <div class="d-flex justify-content-between w-100 flex-wrap">
+          <div class="mb-3 mb-lg-0">
+            <h1 class="h4">放射源管理</h1>
+            <p class="mb-0">提交放射源+搜索放射源</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 mb-4">
+          <div class="card border-0 shadow components-section">
+            <div class="card-body">
+              <div class="row mb-4">
+                <div class="col-lg-4 col-sm-6">
+                  <div class="mb-4">
+                    <label for="email">放射源名称</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      aria-describedby="emailHelp"
+                    />
+                    <small id="emailHelp" class="form-text text-muted"
+                      >请填写尽量清晰明确的放射源名称</small
+                    >
+                  </div>
+                    <div class="mb-4">
+                    <label for="email">地区ISO编码</label>
+                    <input
+                      type="country"
+                      class="form-control"
+                      id="country"
+                      aria-describedby="countrya"
+                    />
+                    <small id="countrya" class="form-text text-muted"
+                      >填写ISO</small
+                    >
+                  </div>
+                  <div class="mb-3">
+                    <label for="birthday">登记时间</label>
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><svg
+                          class="icon icon-xs text-gray-600"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg> </span
+                      ><input
+                        data-datepicker
+                        class="form-control"
+                        id="birthday"
+                        type="text"
+                        placeholder="dd/mm/yyyy"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                  <div class="mb-3">
+                    <label for="firstName">经度</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      required
+                    />
+                  </div>
+                  <div class="mb-4">
+                    <label for="usernameValidate">纬度</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="usernameValidate"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                  <label class="my-1 me-2" for="states">元素种类</label>
+                  <select
+                    id="states"
+                    class="w-100 mb-0"
+                    name="states[]"
+                    multiple="multiple"
+                  >
+                    <option value="AK">He</option>
+                    <option value="WV">Pb</option>
+                    <option value="WI">Vr</option>
+                    <option value="WY">Tm</option>
+                  </select>
+                  <div class="my-4">
+                    <label for="textarea">状态信息</label>
+                    <textarea
+                      class="form-control"
+                      placeholder="Enter your message..."
+                      id="textarea"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end w-100 flex-wrap">
+                  <div>
+                    <button class="btn btn-secondary mx-sm" type="button" id="searchContent">
+                      搜索数据
+                    </button>
+                  </div>
+                  <div>
+                    <!-- Button Modal -->
+                    <button
+                      type="button"
+                      class="btn btn-secondary mx-sm"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalNotification"
+                      id="addSource"
+                    >
+                      提交表单
+                    </button>
+                    <!-- Modal Content -->
+                    <div
+                      class="modal fade"
+                      id="modalNotification"
+                      tabindex="-1"
+                      role="dialog"
+                      aria-labelledby="modalTitleNotify"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="modal-dialog modal-dialog-centered"
+                        role="document"
+                      >
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <p class="modal-title" id="modalTitleNotify">
+                              提示信息
+                            </p>
+                            <button
+                              type="button"
+                              class="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="py-3 text-center">
+                              <h2 class="h4 modal-title my-3 text-success">
+                                提交成功！
+                              </h2>
+                              <p>
+                                提交信息请查看消息中心。待管理员审核后数据将进入数据库。
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End of Modal Content -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 mb-4">
+          <div class="card border-0 shadow components-section">
+            <div class="card-body">
+              <table class="table table-flush" id="source-datatable">
+                <thead class="thead-light">
+                  <tr>
+                    <th>放射源名称</th>
+                    <th>经度</th>
+                    <th>纬度</th>
+                    <th>状态</th>
+                    <th>主要元素</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row"></div>
+    </main>
+    <script src="{% static 'vendor/@popperjs/core/dist/umd/popper.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'vendor/onscreen/dist/on-screen.umd.min.js' %}"></script>
+    <script src="{% static 'vendor/nouislider/distribute/nouislider.min.js' %}"></script>
+    <script src="{% static 'vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js' %}"></script>
+    <script src="{% static 'vendor/countup.js/dist/countUp.umd.js' %}"></script>
+    <script src="{% static 'vendor/apexcharts/dist/apexcharts.min.js' %}"></script>
+    <script src="{% static 'vendor/vanillajs-datepicker/dist/js/datepicker.min.js' %}"></script>
+    <script src="{% static 'vendor/simple-datatables/dist/umd/simple-datatables.js' %}"></script>
+    <script src="{% static 'vendor/sweetalert2/dist/sweetalert2.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/vanillajs-datepicker/dist/js/datepicker.min.js' %}"></script>
+    <script src="{% static 'vendor/fullcalendar/main.min.js' %}"></script>
+    <script src="{% static 'vendor/dropzone/dist/min/dropzone.min.js' %}"></script>
+    <script src="{% static 'vendor/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+    <script src="{% static 'vendor/notyf/notyf.min.js' %}"></script>
+    <script src="{% static 'vendor/leaflet/dist/leaflet.js' %}"></script>
+    <script src="{% static 'vendor/svg-pan-zoom/dist/svg-pan-zoom.min.js' %}"></script>
+    <script src="{% static 'vendor/svgmap/dist/svgMap.min.js' %}"></script>
+    <script src="{% static 'vendor/simplebar/dist/simplebar.min.js' %}"></script>
+    <script src="{% static 'vendor/sortablejs/Sortable.min.js' %}"></script>
+    <script
+      async
+      defer="defer"
+      src="https://buttons.github.io/buttons.js"
+    ></script>
+    <script src="{% static 'assets/js/volt.js' %}"></script>
+    <script src="{% static 'assets/js/volt_extension.js' %}"></script>
+    <script src="{% static 'assets/js/source.js' %}"></script>
+
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317"
+      integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA=="
+      data-cf-beacon='{"rayId":"8713d3ca7bca4018","r":1,"version":"2024.3.0","token":"3a2c60bab7654724a0f7e5946db4ea5a"}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

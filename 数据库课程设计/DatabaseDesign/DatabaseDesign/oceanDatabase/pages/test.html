@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {% for bb in bolb %}
+        <div>
+            <div>{{ forloop.counter }}</div>
+            <div>{{ bb.id }}</div>
+            <div>{{ bb.number }}</div>
+            <div>{{ bb.la }}</div>
+            <div>{{ bb.time }}</div>
+            <div>{{ bb.msg }}</div>
+        </div>
+    {% endfor %}
+
+</body>
+</html>
