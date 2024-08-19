@@ -1,0 +1,142 @@
+[[!!注意：部分指令操作依赖于前几步指令所建立的文件或文件夹结构，建议按照顺序进行测试!!]]
+[[!!注意：将指令复制粘贴到cmd中即可!!]]
+[[!!注意：请耐心等待部分指令执行完成，某些指令如 scp 复制文件或者fformat格式化磁盘可能需要一定时间!!]]
+
+
+
+点击Tiny-UNIX.exe进入系统
+
+
+[[请按照以下步骤与指令验证课设要求内容：]]
+
+>>>>>>>>>>>>>>>>>>>>1. 根据要求建立目录结构<<<<<<<<<<<<<<<<<<<<
+fformat
+cd home
+mkdir texts
+mkdir reports
+mkdir photos
+ls
+
+>>>>>>>>>>>>>>>>>>>>2. 将 test_files/ 文件夹下的所有文件上传文件系统<<<<<<<<<<<<<<<<<<<<
+cd texts
+scp -u test_files/ReadMe.txt ReadMe.txt
+ls
+cd ..
+cd reports
+scp -u test_files/report.docx report.docx
+ls
+cd ..
+cd photos
+scp -u test_files/img.jpg img.jpg
+ls
+cd ..
+cd ..
+
+
+>>>>>>>>>>>>>>>>>>>>(2.5). 检查test_files文件夹，有三个不同类型文件，本指令块测试所有文件下载到本地，请执行后检查test_files文件夹，将新增三个后缀为scp的文件<<<<<<<<<<<<<<<<<<<<
+cd home
+cd reports
+scp -d report.docx test_files/report_scp.docx 
+cd ..
+cd texts
+scp -d ReadMe.txt test_files/ReadMe_scp.txt
+cd ..
+cd photos
+scp -d img.jpg test_files/img_scp.jpg 
+cd ..
+cd ..
+
+
+>>>>>>>>>>>>>>>>>>>>3. 新建文件 /test/Jerry 任意写入800字节<<<<<<<<<<<<<<<<<<<<
+mkdir test
+cd test
+fcreate Jerry
+fwrite 0 800 ABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCAB
+fclose 0
+ls
+
+
+>>>>>>>>>>>>>>>>>>>>4.将文件读写指针定位到500字节，读出500个字节到字符串 abc<<<<<<<<<<<<<<<<<<<<
+fopen Jerry
+flseek 0 500 0
+cp Jerry abc
+ls
+
+
+>>>>>>>>>>>>>>>>>>>>5.将 abc 写回文件<<<<<<<<<<<<<<<<<<<<
+flseek 0 800 0
+fwrite 0 300  ABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCABCAABCABCAB
+fclose 0
+ls
+cd ..
+ls
+
+
+
+[[其他指令测试]]
+>>>>>>>>>>>>>>>>>>>>1. 帮助指令<<<<<<<<<<<<<<<<<<<<
+help
+
+>>>>>>>>>>>>>>>>>>>>2. 展示目录指令<<<<<<<<<<<<<<<<<<<<
+ls
+
+>>>>>>>>>>>>>>>>>>>>3. 创建文件指令，关闭文件指令<<<<<<<<<<<<<<<<<<<<
+fcreate file.txt
+fclose 0
+ls
+
+>>>>>>>>>>>>>>>>>>>>4. 打开文件指令，写文件指令，移动文件指针指令，读文件指令<<<<<<<<<<<<<<<<<<<<
+fopen file.txt
+fwrite 0 11 hellonozomi
+flseek 0 0 0
+fread 0 5
+fread 0 6
+fclose 0
+
+>>>>>>>>>>>>>>>>>>>>5. 切换文件夹指令<<<<<<<<<<<<<<<<<<<<
+cd home
+cd ..
+cd etc
+cd ../home
+cd ..
+cd ..
+cd file.txt
+
+>>>>>>>>>>>>>>>>>>>>6. 复制文件指令<<<<<<<<<<<<<<<<<<<<
+ls
+cp file.txt file_copy.txt
+ls
+
+>>>>>>>>>>>>>>>>>>>>7.重命名指令<<<<<<<<<<<<<<<<<<<<
+frename file.txt re_file.txt
+ls
+
+
+>>>>>>>>>>>>>>>>>>>>8.显示当前路径指令<<<<<<<<<<<<<<<<<<<<
+cd home
+cd reports
+pwd
+cd ..
+cd ..
+
+
+>>>>>>>>>>>>>>>>>>>>9.用户登录指令<<<<<<<<<<<<<<<<<<<<
+login user
+111
+cd ..
+login root
+1466
+cd ..
+
+
+>>>>>>>>>>>>>>>>>>>>10.目录树指令<<<<<<<<<<<<<<<<<<<<
+ftree /
+
+
+>>>>>>>>>>>>>>>>>>>>11.退出系统<<<<<<<<<<<<<<<<<<<<
+exit
+
+
+请在log.txt中查看系统日志
+
+

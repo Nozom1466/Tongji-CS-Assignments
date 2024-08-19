@@ -1,0 +1,68 @@
+[SYSTM] Initializing kernel ...
+[SYSTM] Initailizing BufferManager ...
+[SYSTM] BufferManager Initialized
+[SYSTM] Initializing FileSystem...
+[SYSTM] FileSystem Initialized.
+[SYSTM] Initializing FileManager ...
+[SYSTM] FileManager Initialized.
+[SYSTM] Loading SuperBlock ...
+[SYSTM] SuperBlock loaded.
+[SYSTM] Kernel Initialized.
+[INPUT] fformat	#Param: 0
+[SYSTM] Initializing kernel ...
+[SYSTM] Initailizing BufferManager ...
+[SYSTM] BufferManager Initialized
+[SYSTM] Initializing FileSystem...
+[SYSTM] FileSystem Initialized.
+[SYSTM] Initializing FileManager ...
+[SYSTM] FileManager Initialized.
+[SYSTM] Loading SuperBlock ...
+[SYSTM] SuperBlock loaded.
+[SYSTM] Kernel Initialized.
+[INPUT] cd	#Param: 1
+[INPUT] mkdir	#Param: 1
+[INPUT] mkdir	#Param: 1
+[INPUT] mkdir	#Param: 1
+[INPUT] ls	#Param: 0
+[INPUT] cd	#Param: 1
+[INPUT] scp	#Param: 3
+[INPUT] ls	#Param: 0
+[INPUT] cd	#Param: 1
+[INPUT] cd	#Param: 1
+[INPUT] scp	#Param: 3
+[INPUT] ls	#Param: 0
+[INPUT] cd	#Param: 1
+[INPUT] cd	#Param: 1
+[INPUT] scp	#Param: 3
+[INPUT] ls	#Param: 0
+[INPUT] cd	#Param: 1
+[INPUT] cd	#Param: 1
+[INPUT] cd	#Param: 1
+[INPUT] cd	#Param: 1
+[INPUT] scp	#Param: 3
+[INPUT] cd	#Param: 1
+[INPUT] cd	#Param: 1
+[INPUT] scp	#Param: 3
+[INPUT] cd	#Param: 1
+[INPUT] cd	#Param: 1
+[INPUT] scp	#Param: 3
+[INPUT] cd	#Param: 1
+[INPUT] cd	#Param: 1
+[INPUT] mkdir	#Param: 1
+[INPUT] cd	#Param: 1
+[INPUT] fcreate	#Param: 1
+[INPUT] fwrite	#Param: 3
+[INPUT] fclose	#Param: 1
+[INPUT] ls	#Param: 0
+[INPUT] fopen	#Param: 1
+[INPUT] flseek	#Param: 3
+[INPUT] cp	#Param: 2
+[INPUT] ls	#Param: 0
+[INPUT] flseek	#Param: 3
+[INPUT] fwrite	#Param: 3
+[INPUT] fclose	#Param: 1
+[INPUT] ls	#Param: 0
+[INPUT] cd	#Param: 1
+[INPUT] ls	#Param: 0
+[INPUT] exit	#Param: 0
+[INFO ] File System closed.
