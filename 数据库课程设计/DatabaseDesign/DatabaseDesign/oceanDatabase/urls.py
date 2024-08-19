@@ -1,0 +1,36 @@
+from django.urls import path
+from oceanDatabase import views
+
+
+urlpatterns = [
+    path('test/', views.test, name="test"),
+    path('dashboard/', views.dashboard, name="dashboard"),
+    path('datatables/', views.datatables, name="datatables"),
+    path('datatables/add_item', views.datatablesAddItem, name="datatableAddItem"),
+    path('datatables/delete_item', views.datatablesDeleteItem, name="datatableDeleteItem"),
+    path('datatables/add_waiting', views.datatablesAddWaiting, name="datatablesAddWaiting"),
+    path('datatables/modify_item', views.datatablesModifyItem, name="datatableModifyItem"),
+    path('forgot-password/', views.forgot_password, name="forgot_password"),
+    path('forms-sample/', views.forms_sample, name="forms_sample"),
+    path('forms-source/', views.forms_source, name="forms_source"),
+    path('forms-source/add_source', views.AddSource, name="AddSource"),
+    path('forms-source/add_waiting', views.datatablesAddWaiting, name="datatablesAddWaiting"),
+    path('map/delete_waiting', views.deleteWaiting, name="deleteWaiting"),
+    path('forms-source/search_source', views.SearchSource, name="SearchSource"),
+    path('invoice/', views.invoice, name="invoice"),
+    path('lock/', views.lock, name="lock"),
+    path('map/', views.map, name="map"),
+    path('messages/', views.messages, name="messages"),
+    path('reset-password/', views.reset_password, name="reset_password"),
+    path('settings/', views.settings, name="settings"),
+    path('settings/load', views.loadUser, name="loadUser"),
+    path('sign-in/', views.sign_in, name="sign_in"),
+    path('sign-up/', views.sign_up, name="sign_up"),
+    path('single-message/', views.single_message, name="single_message"),
+    path('tasks/', views.tasks, name="tasks"),
+    path('tasks/add_post', views.tasksAddPost, name="tasksAddPost"),
+    path('transactions/', views.transactions, name="transactions"),
+    path('users/', views.users, name="users"),
+    path('users/modify_item_user', views.datatablesModifyItemUser, name="datatableModifyItemUser"),
+    path('users/delete_item_user', views.datatablesDeleteItemUser, name="datatablesDeleteItemUser"),
+]
