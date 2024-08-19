@@ -1,0 +1,14 @@
+"{% static 'assets/img/favicon/apple-touch-icon.png' %}"
+"{% static 'assets/img/favicon/favicon-32x32.png' %}"
+"{% static 'assets/img/favicon/favicon-16x16.png' %}"
+"{% static 'assets/img/favicon/site.webmanifest' %}"
+"{% static 'assets/img/favicon/safari-pinned-tab.svg' %}"
+
+
+"{% static 'vendor/fullcalendar/main.min.css' %}"
+"{% static 'vendor/apexcharts/dist/apexcharts.css' %}"
+"{% static 'vendor/dropzone/dist/min/dropzone.min.css' %}"
+"{% static 'vendor/choices.js/public/assets/styles/choices.min.css' %}"
+"{% static 'vendor/leaflet/dist/leaflet.css' %}"
+"{% static 'css/volt.css' %}"
+"{% static 'css/volt_extension.css' %}"
