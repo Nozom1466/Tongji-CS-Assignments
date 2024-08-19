@@ -2,3 +2,7 @@ More repositories:
 - [TJ-CSCCG/TJ-Course](https://github.com/TJ-CSCCG/TJCS-Course)
 - [TJ-CSCCG/TJ-Assignment](https://github.com/TJ-CSCCG/TJCS-Assignment)
 - [TJCS-Undergraduate-Courses](https://github.com/zzhuncle/TJCS-Undergraduate-Courses)
+
+Disclaimer:
+- Repository will not be maintained.
+- Slides/scripts/answer sheets just for REFERENCE.
