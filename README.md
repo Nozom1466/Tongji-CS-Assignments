@@ -1,4 +1,4 @@
-**部分内容因使用 `LFS` 上传，渲染不了，`clone`之后可以查看**
+
 
 更多资料：
 - [TJ-CSCCG/TJ-Course](https://github.com/TJ-CSCCG/TJCS-Course)
