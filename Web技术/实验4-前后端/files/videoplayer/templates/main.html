@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;600&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>MTS Video Player</title>
+  </head>
+  <body class="">
+    <div class="icon-change sun"><i class="bx bx-sun"></i></div>
+    <div class="icon-change moon"><i class="bx bx-moon"></i></div>
+    <main class="container">
+      <section class="main-video">
+        <div class="video-play">
+          <video
+            class="video-onlive"
+            src="{% static 'videos/video1.mp4' %}"
+            autoplay
+            muted
+          ></video>
+          <div class="control">
+            <div class="fa fa-play play_pause">
+              <i class="bx bx-play-circle v-start"></i>
+              <i class="bx bx-pause-circle v-stop"></i>
+            </div>
+            <div class="progress">
+              <div class="progress-bar"><div class="tips-go"></div></div>
+            </div>
+            <div class="timer">
+              <span class="progress_timer">00:00</span>/
+              <span class="duration_timer">00:00</span>
+            </div>
+            <div class="fa fa-expand expand">
+              <i class="bx bx-expand-alt expander"></i>
+            </div>
+          </div>
+
+          <div class="vol-control">
+            <input type="range" class="btnsound" value="100" max="100" />
+          </div>
+        </div>
+        <div class="down-video">
+          <h3 class="title live-title">Title of the playing video</h3>
+
+          <div class="speed-control">
+            <button class="speed-button sp1">0.5X</button>
+            <button class="speed-button sp2 sp-active">1.0X</button>
+            <button class="speed-button sp3">1.5X</button>
+            <button class="speed-button sp4">2.0X</button>
+          </div>
+        </div>
+      </section>
+      <section class="video-playlist">
+        <h3 class="title">Liz and Blue Bird Collections</h3>
+        <p class="list-summary">10 lessons &nbsp; . &nbsp; 50m 48s</p>
+        <div class="videos">
+          <div class="video active">
+            <i class="bx bx-play-circle"></i>
+            <i class="bx bx-pause-circle pause"></i>
+
+            <p class="numericalNumber">1.</p>
+            <h3 class="title">Title</h3>
+            <p class="time time1">3:46</p>
+          </div>
+          <div class="video video-1">
+            <i class="bx bx-play-circle"></i>
+            <i class="bx bx-pause-circle pause"></i>
+
+            <p class="numericalNumber">1.</p>
+            <h3 class="title">title title title</h3>
+            <p class="time">3:46</p>
+          </div>
+<!--          <div class="video video-2">-->
+<!--            <i class="bx bx-play-circle"></i>-->
+<!--            <i class="bx bx-pause-circle pause"></i>-->
+<!--            <p class="numericalNumber">01.</p>-->
+<!--            <h3 class="title">title title title</h3>-->
+<!--            <p class="time">3:46</p>-->
+<!--          </div>-->
+<!--          <div class="video video-3">-->
+<!--            <i class="bx bx-play-circle"></i>-->
+<!--            <i class="bx bx-pause-circle pause"></i>-->
+
+<!--            <p class="numericalNumber">01.</p>-->
+<!--            <h3 class="title">title title title</h3>-->
+<!--            <p class="time">3:46</p>-->
+<!--          </div>-->
+<!--          <div class="video video-4">-->
+<!--            <i class="bx bx-play-circle"></i>-->
+<!--            <i class="bx bx-pause-circle pause"></i>-->
+
+<!--            <p class="numericalNumber">01.</p>-->
+<!--            <h3 class="title">title title title</h3>-->
+<!--            <p class="time">3:46</p>-->
+<!--          </div>-->
+<!--          <div class="video video-5">-->
+<!--            <i class="bx bx-play-circle"></i>-->
+<!--            <i class="bx bx-pause-circle pause"></i>-->
+
+<!--            <p class="numericalNumber">01.</p>-->
+<!--            <h3 class="title">title title title</h3>-->
+<!--            <p class="time">3:46</p>-->
+<!--          </div>-->
+<!--          <div class="video video-6">-->
+<!--            <i class="bx bx-play-circle"></i>-->
+<!--            <i class="bx bx-pause-circle pause"></i>-->
+
+<!--            <p class="numericalNumber">01.</p>-->
+<!--            <h3 class="title">title title title</h3>-->
+<!--            <p class="time">3:46</p>-->
+<!--          </div>-->
+<!--          <div class="video video-7">-->
+<!--            <i class="bx bx-play-circle"></i>-->
+<!--            <i class="bx bx-pause-circle pause"></i>-->
+
+<!--            <p class="numericalNumber">01.</p>-->
+<!--            <h3 class="title">title title title</h3>-->
+<!--            <p class="time">3:46</p>-->
+<!--          </div>-->
+        </div>
+      </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      var videoURL = "{% static 'videos/video' %}"
+      var context = '{{ data }}';
+      console.log(context)
+    </script>
+    {% load static %}
+    <script src="{% static 'script.js' %}"></script>
+
+  </body>
+</html>

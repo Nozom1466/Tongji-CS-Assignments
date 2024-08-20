@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<p> HELLO WORLD</p>
+<ul id="rrr">
+  <li>helllllllq</li>
+    <li class="www"></li>
+</ul>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var context = '{{ data }}';
+    cleanedText = context.replaceAll('&quot;', '"');
+    cv_list = JSON.parse(cleanedText)
+    console.log(cv_list[0].stu_psw.type);
+
+    var myUl = document.getElementById("rrr");
+
+    for (var i = 0; i < cv_list.length; i++) {
+      var newLi = document.createElement("li");
+      newLi.innerHTML = cv_list[i].stu_name + " " + cv_list[i].stu_psw;
+      myUl.appendChild(newLi);
+    }
+</script>
+</body>
+</html>

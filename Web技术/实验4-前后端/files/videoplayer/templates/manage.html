@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>管理员界面</title>
+
+    <!-- CSS代码 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fff;
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      form {
+        margin-bottom: 20px;
+      }
+
+      input,
+      button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+
+
+      input[type="submit"],
+      button[type="submit"] {
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        padding: 20px;
+        border: 1px solid #000;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        position: relative;
+      }
+
+      li .delete-btn {
+        position: absolute;
+        align-self:center;
+        border: none;
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+        right: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 2px solid black;
+      }
+
+      li .down-btn {
+        position: absolute;
+        align-self:center;
+        border: none;
+        background-color: #fff;
+        color: #000;
+        cursor: pointer;
+        right: 13%;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 2px solid black;
+        height: 70%;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 2.5;
+      }
+
+      li .delete-btn:hover {
+        background-color: gray;
+        color: white;
+      }
+
+      li .delete-btn:active {
+        background-color: black;
+        color: white;
+      }
+
+      .delete-btn,
+       .down-btn {
+        width: 10%;
+      }
+
+      li.selected {
+        background-color: #d73030;
+        color: white;
+      }
+
+      .ulist {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .list-item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .all-delete {
+        padding: 10px 20px;
+        background-color: red;
+        color: white;
+       font-weight: 600;
+        width: 20%;
+        // letter-spacing: 2px;
+      }
+
+      .add-button {
+        font-size: large;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>管理员</h1>
+
+      <!-- 添加数据表单 -->
+
+      <h2>上传视频</h2>
+      <form action="/videoplayer/uploaded/" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="file" name="video_file" accept="video/*">
+          <label>File Title</label><input name="fileRename" placeholder="rename your file"/>
+          <input type="submit" value="Upload">
+      </form>
+
+
+      <!-- 数据列表 -->
+      <div id="data-list">
+        <div class="header">
+          <h2>数据列表</h2>
+          <button class="all-delete">DELETE ALL</button>
+        </div>
+        <ul id="list" class="ulist">
+          <!-- 数据将动态地显示在这里 -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- JS代码 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // 获取表单和列表元素
+      const list = document.getElementById("list");
+
+      // 添加数据的函数
+      function addData(name, description) {
+        // 创建 li 元素和删除按钮元素
+        const li = document.createElement("li");
+        li.classList.add("list-item")
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "删除";
+        deleteBtn.classList.add("delete-btn");
+
+        const downBtn = document.createElement("button");
+        downBtn.innerText = "下载";
+        downBtn.classList.add("down-btn");
+
+        // 添加数据到 li 元素中
+        li.innerHTML = `<strong>NAME: </strong> <span>DESCRIPTION</span>`;
+        li.appendChild(downBtn)
+        li.appendChild(deleteBtn);
+
+        // 将 li 元素添加到列表中
+        list.appendChild(li);
+
+        // 删除按钮点击事件
+        deleteBtn.addEventListener("click", () => {
+          //li.remove();
+          //console.log(li);
+          li.classList.add("selected");
+        });
+      }
+
+      var context = '{{ data }}';
+      console.log(context)
+
+      cleanedText = context.replaceAll('&quot;', '"');
+      console.log(cleanedText)
+      cv_list = JSON.parse(cleanedText)
+      console.log(cv_list);
+
+      for (let i = 0;i < cv_list.length; i++) {
+        const li = document.createElement("li");
+        li.classList.add("list-item")
+        const deleteBtn = document.createElement("button");
+        deleteBtn.innerText = "选择";
+        deleteBtn.classList.add("delete-btn");
+
+        const downBtn = document.createElement("a");
+        downBtn.innerText = "下载";
+        downBtn.style.display = "inline-box";
+        downBtn.classList.add("down-btn");
+        downBtn.setAttribute('download', '');
+
+        // 添加数据到 li 元素中
+        li.innerHTML = `<strong>ID: ${cv_list[i].video_id} </strong> <span>${cv_list[i].video_name}</span>`;
+        li.appendChild(downBtn);
+        li.appendChild(deleteBtn);
+        sq = cv_list[i].video_id;
+        file_name = "video" + sq + ".mp4";
+        downBtn.href = '../static/videos/'+file_name;
+
+        // 将 li 元素添加到列表中
+        list.appendChild(li);
+
+        deleteBtn.addEventListener("click", () => {
+          if (li.classList.contains("selected")) {
+              li.classList.remove("selected");
+              deleteBtn.style.backgroundColor = '#fff';
+              deleteBtn.style.color = '#000';
+          } else {
+            li.classList.add("selected");
+            deleteBtn.style.backgroundColor = 'red';
+            deleteBtn.style.color = 'white';
+          }
+        });
+
+        mess = [cv_list[i].video_id]
+
+        downBtn.addEventListener("click", () => {
+            $.ajax({
+            url: "../downItems/",
+            type: "POST",
+            data: { itemsToDownload : mess },
+            success: function (message) {
+
+            },
+            error: function () {
+
+            },
+          });
+        });
+
+
+      }
+
+      deleteAll = document.querySelector(".all-delete");
+      toBeDeleted = []
+      deleteAll.addEventListener("click", () => {
+          selectedItems = document.querySelectorAll(".list-item");
+          for (let i = 0;i < selectedItems.length; i++) {
+              if (selectedItems[i].classList.contains("selected")) {
+                  tar = parseInt(selectedItems[i].querySelector("strong").innerHTML.slice(3));
+                  toBeDeleted.push(tar);
+              }
+          }
+          console.log(toBeDeleted)
+
+
+          $.ajax({
+            url: "../deleteItems/",
+            type: "POST",
+            data: { itemsToDelete : toBeDeleted },
+            success: function (message) {
+                window.location.replace("../deleted/");
+            },
+            error: function () {
+
+            },
+          });
+      })
+
+
+
+    </script>
+  </body>
+</html>

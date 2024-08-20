@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ADMIN</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        animation: gradient 10s ease infinite;
+      }
+
+      body {
+        // background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 900px;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body::before {
+        position: absolute;
+        content: "Administrator Login, Edit Videos As You Wish!";
+        font-size: 50px;
+        top: 20%;
+        left: 50%;
+        color: gray;
+        transform: translate(-45%);
+        width: 1200px;
+      }
+
+      html {
+        background: linear-gradient(45deg, black, white);
+        background-size: 400% 400%;
+        animation: gradient 20s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .main {
+        background-color: grey;
+        padding: 20px 40px;
+        height: 35%;
+        width: 25%;
+        border-radius: 10px;
+      }
+
+      .former {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+      }
+
+      .items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .username {
+        margin-top: 30px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        text-align: left;
+        color: #fff;
+        font-size: large;
+      }
+
+      input {
+
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        background-color: white;
+        width: 65%;
+        //padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 50px;
+        box-sizing: border-box;
+        font-weight: 1.5
+        font-size: large;
+        //color: white;
+        align-self: center;
+        height: 50px;
+        font-size: medium;
+        padding-left: 30px;
+        letter-spacing: 3px;
+        font-family: Arial, sans-serif;
+      }
+      input[type="submit"] {
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        padding: 15px 30px;
+        cursor: pointer;
+        width: 50%;
+        align-self: center;
+        font-size: large;
+        font-weight: 2.0;
+        border-radius: 30px;
+      }
+      input[type="submit"]:hover {
+        background-color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <form action="/videoplayer/admin/" method="post" class="former">
+        {% csrf_token %}
+        <div class="items username">
+          <label>AdminNAME</label> <input name="user" type="text" />
+        </div>
+        <div class="items password">
+          <label>PASSWORD</label> <input name="pwd" type="password" />
+        </div>
+        <input type="submit" value="LOG IN" />
+      </form>
+    </div>
+  </body>
+</html>
