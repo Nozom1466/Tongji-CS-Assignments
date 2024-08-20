@@ -6,11 +6,7 @@
 - [TJCS-Undergraduate-Courses](https://github.com/zzhuncle/TJCS-Undergraduate-Courses)
 
 声明:
-- 该仓库不会被维护.
+- 该仓库未来不会被维护.
 - 所有答案/参考资料仅作参考.
 - 若资料侵权则请在 `issue` 提出
 
-
-```
-你好
-```
