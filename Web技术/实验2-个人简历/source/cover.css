@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* ============= Variables ============= */
+
+:root {
+  --header-height: 4rem;
+
+  --white-1: #f8f9faff;
+  --white-2: #e9ecefff;
+  --white-3: #dee2e6ff;
+  --grey-1: #ced4daff;
+  --grey-2: #adb5bdff;
+  --grey-3: #6c757dff;
+  --black-1: #495057ff;
+  --black-2: #343a40ff;
+  --black-3: #212529ff;
+
+  --title-color: var(--black-3);
+  --text-color: var(--black-2);
+  --text-color-alt: var(--grey-3);
+  --body-color: var(--white-1);
+  --body-color-alt: var(--grey-1);
+
+  --title-color-inv: var(--white-1);
+  --text-color-inv: var(--white-2);
+  --body-color-inv: var(--black-3);
+
+  --scrollbar-track: var(--white-3);
+  --scrollbar-thumb: var(--grey-3);
+  --scrollbar-thumb-hover: var(--black-1);
+
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.875rem;
+  --small-font-size: 0.688rem;
+  --main-cover-font-size-max: 10rem;
+  --main-cover-font-size-mid: 8rem;
+  --main-cover-font-size-min: 6rem;
+
+  --normal-font-weight: 400;
+  --medium-font-weight: 500;
+  --bold-font-weight: 600;
+
+  --m-1: 0.5rem;
+  --m-2: 1rem;
+  --m-3: 1.5rem;
+
+  --transition-time: 0.2s;
+}
+
+/* ============= Reset ============= */
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a,
+i,
+div {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* ============= Base ============= */
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--normal-font-weight);
+  color: var(--text-color);
+  background-color: var(--body-color);
+  transition: all var(--transition-time);
+}
+
+/* ============= Dark Theme ============= */
+body.dark {
+  --title-color: var(--white-1);
+  --text-color: var(--white-2);
+  --text-color-alt: var(--grey-1);
+  --body-color: var(--black-3);
+  --body-color-alt: var(--black-1);
+
+  --title-color-inv: var(--black-3);
+  --text-color-inv: var(--black-2);
+  --body-color-inv: var(--white-1);
+
+  --scrollbar-track: var(--black-1);
+  --scrollbar-thumb: var(--grey-2);
+  --scrollbar-thumb-hover: var(--white-1);
+}
+
+body.dark .home__theme--light {
+  display: none;
+}
+
+body.dark .home__theme--dark {
+  display: block;
+}
+
+.home__theme {
+  position: absolute;
+  right: var(--m-3);
+  top: var(--m-3);
+  font-size: var(--h1-font-size);
+  cursor: pointer;
+  transition: all var(--transition-time);
+}
+
+.home__theme--dark {
+  display: none;
+}
+
+.home__theme--light {
+  display: block;
+}
+
+.main-title {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.resumeFont {
+  display: flex;
+  justify-content: flex-start;
+  grid-row-start: span 2;
+  font-size: var(--main-cover-font-size-max);
+  margin-left: var(--m-3);
+}
+
+.brief-intro {
+  height: 100%;
+  width: 100%;
+  padding: 27rem auto;
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: 10rem;
+  position: relative;
+  /* margin-top: 27rem; */
+}
+
+.brief-intro::before {
+  content: "";
+  position: absolute;
+  /* background-color: var(--text-color-alt); */
+  border: dotted var(--text-color-alt) 15px;
+  display: block;
+  height: 18rem;
+  width: 18rem;
+  transform: translate(-100%, -50%);
+  z-index: -1;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+}
+
+.tip {
+  margin-top: var(--m-1);
+}
+
+.brief-intro-content {
+  mix-blend-mode: difference;
+  font-size: var(--main-cover-font-size-min);
+}
+
+.deco {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+}
+
+.deco-1 {
+  height: 25rem;
+  width: 25rem;
+  background-color: var(--text-color-alt);
+  transform: translate(-50%, -50%);
+  /* opacity: 50%; */
+  z-index: -1;
+}
+.deco-2 {
+  height: 20rem;
+  width: 20rem;
+  background-color: var(--text-color);
+  transform: translate(-100%, -100%);
+  /* opacity: 50%; */
+
+  z-index: -2;
+}
+
+.phrase1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.phrase2 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.avatar {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.info {
+  grid-column: 4 / -1;
+  grid-row: 3 / -1;
+  height: 100%;
+}
+
+.info ul {
+  /* height: 100%; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: var(--m-2);
+}
+
+.info-item {
+  display: flex;
+  width: 100%;
+  /* justify-content: center; */
+  gap: var(--m-2);
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--h2-font-size);
+  font-weight: var(--bold-font-weight);
+  /* border-left: var(--text-color) solid 5px; */
+  box-shadow: 0 1px 3px 0 var(--text-color-alt);
+  padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+}
+
+.item-content {
+  margin-right: var(--m-3);
+}
+
+.item-type {
+  text-transform: uppercase;
+  padding-left: var(--m-3);
+}
+
+.item-content {
+  font-weight: var(--bold-font-weight);
+  font-size: var(--h2-font-size);
+}
+
+@media screen and (max-width: 1235px) {
+  .brief-intro {
+    opacity: 10%;
+  }
+  .brief-intro-content {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1235px) {
+  .phrase1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .phrase1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .info {
+    grid-column: 2 / -1;
+    grid-row: 3 / -1;
+    height: 100%;
+  }
+
+  .resumeFont {
+    font-size: var(--main-cover-font-size-mid);
+  }
+
+  .info-item {
+    font-size: var(--h2-font-size);
+  }
+  .item-content {
+    font-size: var(--h2-font-size);
+  }
+  .main-title {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main-title {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 1fr 3fr;
+  }
+
+  .phrase1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .phrase2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .info {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    height: 100%;
+  }
+
+  .resumeFont {
+    font-size: var(--main-cover-font-size-min);
+  }
+
+  .info-item {
+    font-size: var(--h3-font-size);
+  }
+  .item-content {
+    font-size: var(--h3-font-size);
+  }
+}
