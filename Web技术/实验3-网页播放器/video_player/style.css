@@ -1,0 +1,458 @@
+:root {
+  --background-color: #fff;
+  --text: #000;
+  --video-hover: #eee;
+  --video-selected: #000;
+  --video-selected-text: #fff;
+
+  --border-radius-sm: 9px;
+
+  --margin-ssm: 1rem;
+  --margin-sm: 2rem;
+  --margin-md: 6rem;
+  --margin-mx: 9rem;
+
+  --fontsize-sm: 1.6rem;
+  --fontsize-md: 2rem;
+
+  --scrollbar-backgroundcolor: #fff;
+  --scrollbar-thumbcolor: #000;
+  --play-icon-normal: #555;
+  --play-icon-hover: #fff;
+  --play-icon-selected: #fff;
+  --shadow: rgb(0, 0, 0, 0.02);
+
+  --transition-time: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: var(--margin-mx);
+  transition: all var(--transition-time);
+  position: relative;
+}
+
+body.dark {
+  --tahdiahdia: #a12222;
+  --background-color: #111;
+  --text: #fff;
+  --video-hover: #ccc;
+  --video-selected: #fff;
+  --video-selected-text: #000;
+
+  --border-radius-sm: 9px;
+
+  --margin-ssm: 1rem;
+  --margin-sm: 2rem;
+  --margin-md: 6rem;
+
+  --fontsize-sm: 1.6rem;
+  --fontsize-md: 2rem;
+
+  --scrollbar-backgroundcolor: #000;
+  --scrollbar-thumbcolor: #eee;
+  --play-icon-normal: #555;
+  --play-icon-hover: #000;
+  --play-icon-selected: #000;
+  --shadow: rgb(255, 255, 255, 0.02);
+}
+
+/* ------------------------dark mode------------------------ */
+.icon-change {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.icon-change:hover {
+  cursor: pointer;
+}
+
+.icon-change .bx {
+  font-size: var(--fontsize-md);
+  color: var(--text);
+}
+
+body .sun {
+  visibility: hidden;
+}
+body .moon {
+  visibility: visible;
+}
+
+body.dark .moon {
+  visibility: hidden;
+}
+body.dark .sun {
+  visibility: visible;
+}
+
+/* ------------------------main video------------------------ */
+
+.main-video {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* gap: var(--margin-sm); */
+}
+
+.main-video .title {
+  margin-bottom: var(--margin-sm);
+  font-size: var(--fontsize-md);
+  color: var(--text);
+}
+
+.container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  column-gap: 5rem;
+
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.main-video,
+.video-playlist {
+  width: 100%;
+  /* height: 30rem; */
+}
+
+.main-video video {
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--margin-sm);
+}
+
+/* ------------------------video process bar------------------------ */
+
+.video-play {
+  position: relative;
+}
+
+.control {
+  position: absolute;
+  background: var(--text);
+  opacity: 0.5;
+  width: 98%;
+  height: 8%;
+  border-radius: var(--border-radius-sm);
+  /* border-top-left-radius: 0;
+  border-top-right-radius: 0; */
+  left: 50%;
+  top: 83%;
+  transform: translateX(-50%);
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.video-play:hover .control,
+.video-play:hover .vol-control {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.control .progress {
+  display: block;
+  width: 75%;
+  height: 10px;
+  background: var(--play-icon-normal);
+  border-radius: 100px;
+}
+
+.control .progress .tips-go {
+  background-color: var(--background-color);
+  height: 10px;
+  border-radius: 100px;
+  /* width: 50%; */
+}
+
+.control .fa .bx {
+  font-size: var(--fontsize-md);
+  color: var(--play-icon-normal);
+}
+
+.control .timer .progress_timer,
+.control .timer .duration_timer {
+  color: var(--background-color);
+}
+
+.v-start {
+  display: none;
+}
+
+.v-stop {
+  display: block;
+}
+
+.control .fa .bx.expander {
+  font-size: var(--fontsize-sm);
+}
+
+.speed-control {
+  display: flex;
+  /* justify-content: space-between; */
+  /* width: 40%; */
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 0 1rem 0.5rem var(--shadow);
+}
+
+.speed-control .speed-button {
+  /* border-radius: 100px; */
+  height: 50%;
+  padding: 0.5rem 1.2rem;
+  /* font-size: var(--fontsize-sm); */
+  background-color: var(--background-color);
+  border: 1px solid var(--text);
+  color: var(--text);
+}
+
+.speed-button:hover {
+  cursor: pointer;
+}
+
+.sp1 {
+  border-top-left-radius: var(--border-radius-sm);
+  border-bottom-left-radius: var(--border-radius-sm);
+}
+
+.sp4 {
+  border-top-right-radius: var(--border-radius-sm);
+  border-bottom-right-radius: var(--border-radius-sm);
+}
+
+.speed-button.sp-active {
+  background-color: var(--text);
+  color: var(--background-color);
+}
+
+.live-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.down-video {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ------------------------video list------------------------ */
+
+.vol-control {
+  position: absolute;
+  width: 23%;
+  height: 5%;
+  top: 5%;
+  right: 2%;
+  padding: 1.2rem 0.6rem;
+  border-radius: var(--border-radius-sm);
+  /* padding-right: 0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text);
+  opacity: 0.5;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+:root {
+  --vol-len: 100%;
+}
+
+input[type="range"]::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 100%;
+  width: var(--vol-len);
+  border-radius: 5px;
+  background-color: var(--background-color);
+  border: none;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  /* overflow: hidden; */
+  width: 100%;
+  height: 10px;
+  outline: none;
+  background: var(--scrollbar-thumbcolor);
+  border-radius: 100px;
+
+  /* transition: 0.3s; */
+  position: relative;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: var(--play-icon-normal);
+  border-radius: 50%;
+}
+
+/* ------------------------video list------------------------ */
+
+.video-playlist .title {
+  padding-left: 1rem;
+  font-size: var(--fontsize-sm);
+  color: var(--text);
+}
+
+p {
+  color: var(--text);
+}
+
+.video-playlist > p {
+  padding: 1rem;
+  color: var(--text);
+}
+
+.video-playlist .videos {
+  height: 70%;
+  overflow-y: auto;
+}
+
+.video-playlist .videos .video {
+  position: relative;
+  width: 100%;
+  padding: 1.2rem var(--margin-sm);
+  margin-top: 0.8rem;
+  /* margin-right: 0.5rem; */
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  /* gap: 1rem; */
+
+  display: flex;
+  gap: var(--margin-sm);
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.video-playlist .videos .video:last-child {
+  margin-right: 0;
+}
+
+.video-playlist .videos .video:hover {
+  background-color: var(--video-hover);
+}
+
+.video-playlist .videos .video:hover .bx {
+  color: var(--play-icon-hover);
+}
+
+.video-playlist .videos .video.active {
+  background-color: var(--video-selected);
+  color: var(--video-selected-text);
+}
+
+.pause {
+  visibility: hidden;
+}
+
+.video-playlist .videos .video.active .bx-play-circle {
+  visibility: hidden;
+}
+
+.video-playlist .videos .video.active .pause {
+  visibility: visible;
+}
+
+.video-playlist .videos .video.active .title {
+  color: var(--background-color);
+}
+
+.video-playlist .videos .video.active .bx-play-circle {
+  visibility: hidden;
+}
+
+.video-playlist .videos .video.active .bx {
+  color: var(--play-icon-selected);
+}
+
+.video-playlist .videos .video.active p {
+  color: var(--background-color);
+}
+
+.video .bx {
+  position: absolute;
+  font-size: var(--fontsize-sm);
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--play-icon-normal);
+}
+
+.video p {
+  margin-left: 2.5rem;
+}
+
+.video h3 {
+  width: 23rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  font: 100 1rem;
+  padding: 0 0.5rem;
+}
+
+.video-playlist .videos::-webkit-scrollbar {
+  width: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: var(--scrollbar-backgroundcolor);
+}
+
+.video-playlist .videos::-webkit-scrollbar-thumb {
+  border-radius: 0.4rem;
+  background-color: var(--scrollbar-thumbcolor);
+}
+
+/* ------------------------responsive design------------------------ */
+
+@media screen and (max-width: 1590px) {
+  .container {
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 5fr 1fr; */
+  }
+
+  .icon-change {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .video-playlist .videos {
+    height: 100%;
+    overflow-y: visible;
+  }
+
+  .video h3 {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
