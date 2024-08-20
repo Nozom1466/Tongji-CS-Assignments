@@ -1,3 +1,5 @@
+**部分内容因使用 `LFS` 上传，渲染不了，`clone`之后可以查看**
+
 更多资料：
 - [TJ-CSCCG/TJ-Course](https://github.com/TJ-CSCCG/TJCS-Course)
 - [TJ-CSCCG/TJ-Assignment](https://github.com/TJ-CSCCG/TJCS-Assignment)
@@ -9,4 +11,4 @@
 - 若资料侵权则 `issue` 提出之后删除
 
 
-> 部分内容因使用 `LFS` 上传，渲染不了，下载可以查看
+
