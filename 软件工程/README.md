@@ -1,7 +1,7 @@
 `zjq` 老师班级
 
 **课程项目**
-- 课程项目前端部分请参考 [WhereToEatAtTongji-Frontend](https://github.com/WinstonLiyt/WhereToEatAtTongji-Frontend)
+- 课程项目前后端部分请参考 [WhereToEatAtTongji-Frontend](https://github.com/WinstonLiyt/WhereToEatAtTongji-Frontend), [WhereToEatAtTongji-Backend](https://github.com/WinstonLiyt/WhereToEatAtTongji-Backend)
 
 
 
