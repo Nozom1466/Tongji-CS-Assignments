@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>联系我们详情</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      .header {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .section {
+        width: 100%;
+        max-width: 600px;
+        margin: 10px 0;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 5px;
+      }
+      .section h2 {
+        color: #4caf50;
+      }
+      .section p {
+        color: #555;
+        line-height: 1.6;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      .contact-form label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .contact-form button {
+        margin: 20px 0;
+        padding: 10px 20px;
+        color: white;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .contact-form button:hover {
+        background-color: #45a049;
+      }
+      .back-button {
+        display: inline-block;
+        margin: 20px 0;
+        padding: 10px 20px;
+        color: white;
+        background-color: #4caf50;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .back-button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>联系我们详情</h1>
+    </div>
+    <div class="content">
+      <div class="section">
+        <h2>联系方式</h2>
+        <p>地址：上海市嘉定区曹安公路4800号同济大学</p>
+        <p>电话：18745157029</p>
+        <p>邮箱：2151569@tongji.edu.cn</p>
+      </div>
+      <div class="section">
+        <h2>在线留言</h2>
+        <form class="contact-form">
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">邮箱</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">留言</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+
+          <button type="submit">提交</button>
+        </form>
+      </div>
+    </div>
+    <div style="text-align: center" onclick="navigateTo()">
+      <a href="#" class="back-button">返回</a>
+    </div>
+    <script>
+      function navigateTo() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学院网站</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+      }
+      .header {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px;
+      }
+      .block {
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+        width: 250px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .block:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .block .icon {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #ddd;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 50px;
+        color: #4caf50;
+      }
+      .block h3 {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      .block p {
+        padding: 0 15px 15px;
+        color: #777;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>欢迎来到同济大学CS学院网站！</h1>
+    </div>
+    <div class="container">
+      <div class="block" onclick="navigateTo('course')">
+        <div class="icon">📚</div>
+        <h3>教学</h3>
+        <p>课程信息、教学资源、在线课堂</p>
+      </div>
+      <div class="block" onclick="navigateTo('research')">
+        <div class="icon">🔬</div>
+        <h3>科研</h3>
+        <p>科研项目、学术论文、研究成果</p>
+      </div>
+      <div class="block" onclick="navigateTo('information')">
+        <div class="icon">📢</div>
+        <h3>信息传递</h3>
+        <p>通知公告、校园新闻、交流平台</p>
+      </div>
+      <div class="block" onclick="navigateTo('contact')">
+        <div class="icon">☎️</div>
+        <h3>联系我们</h3>
+        <p>联系方式、反馈意见、在线客服</p>
+      </div>
+    </div>
+    <script>
+      function navigateTo(section) {
+        window.location.href = section + ".html";
+      }
+    </script>
+  </body>
+</html>
