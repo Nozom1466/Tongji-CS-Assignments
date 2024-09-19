@@ -1,9 +1,13 @@
 更多资料：
+Recently: 
+- [TongjiUniversity-Course](https://github.com/italas12138/TongjiUniversity-Course)
+- [TongjiCS-Undergraduate-Courses](https://github.com/youknowwhom/TongjiCS-Undergraduate-Courses)⭐⭐
+
+Others:
 - [TJ-CSCCG/TJ-Course](https://github.com/TJ-CSCCG/TJCS-Course)
 - [TJ-CSCCG/TJ-Assignment](https://github.com/TJ-CSCCG/TJCS-Assignment)⭐
 - [TJCS-Undergraduate-Courses](https://github.com/zzhuncle/TJCS-Undergraduate-Courses)
-- [TongjiUniversity-Course](https://github.com/italas12138/TongjiUniversity-Course)
-- [TongjiCS-Undergraduate-Courses](https://github.com/youknowwhom/TongjiCS-Undergraduate-Courses)⭐⭐
+
 
 
 声明:
