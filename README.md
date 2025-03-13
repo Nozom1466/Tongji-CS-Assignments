@@ -1,6 +1,6 @@
 更多资料：
 
-Recently: 
+21'-25': 
 - [TongjiUniversity-Course](https://github.com/italas12138/TongjiUniversity-Course)
 - [TongjiCS-Undergraduate-Courses](https://github.com/youknowwhom/TongjiCS-Undergraduate-Courses)⭐⭐
 
@@ -12,7 +12,6 @@ Others:
 
 
 声明:
-- 该仓库未来不会被维护.
 - 所有答案/参考资料仅作参考.
 - 若资料侵权则请在 `issue` 提出.
 
