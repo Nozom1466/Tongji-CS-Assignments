@@ -1,0 +1,28 @@
+步骤 状态栈 符号栈 输入串 动作说明
+0    0,    #,    intIdentifier(void){intIdentifier;return;}    用 N ->进行归约, goto[ 0 , long ]= 1 , 入栈
+1    0,1,    #,N,    intIdentifier(void){intIdentifier;return;}    action[ 1 , long ]= 2 , 状态 2 入栈
+2    0,1,2,    #,N,int,    Identifier(void){intIdentifier;return;}    action[ 2 , Word ]= 6 , 状态 6 入栈
+3    0,1,2,6,    #,N,int,Identifier,    (void){intIdentifier;return;}    用 M ->进行归约, goto[ 6 , ) ]= 10 , 入栈
+4    0,1,2,6,10,    #,N,int,Identifier,M,    (void){intIdentifier;return;}    用 A ->进行归约, goto[ 10 , ) ]= 13 , 入栈
+5    0,1,2,6,10,13,    #,N,int,Identifier,M,A,    (void){intIdentifier;return;}    action[ 13 , ) ]= 15 , 状态 15 入栈
+6    0,1,2,6,10,13,15,    #,N,int,Identifier,M,A,(,    void){intIdentifier;return;}    action[ 15 , volatile ]= 19 , 状态 19 入栈
+7    0,1,2,6,10,13,15,19,    #,N,int,Identifier,M,A,(,void,    ){intIdentifier;return;}    用 parameter ->void,进行归约, goto[ 15 , + ]= 21 , 入栈
+8    0,1,2,6,10,13,15,21,    #,N,int,Identifier,M,A,(,parameter,    ){intIdentifier;return;}    action[ 21 , + ]= 25 , 状态 25 入栈
+9    0,1,2,6,10,13,15,21,25,    #,N,int,Identifier,M,A,(,parameter,),    {intIdentifier;return;}    action[ 25 , } ]= 27 , 状态 27 入栈
+10    0,1,2,6,10,13,15,21,25,27,    #,N,int,Identifier,M,A,(,parameter,),{,    intIdentifier;return;}    action[ 27 , long ]= 29 , 状态 29 入栈
+11    0,1,2,6,10,13,15,21,25,27,29,    #,N,int,Identifier,M,A,(,parameter,),{,int,    Identifier;return;}    action[ 29 , Word ]= 32 , 状态 32 入栈
+12    0,1,2,6,10,13,15,21,25,27,29,32,    #,N,int,Identifier,M,A,(,parameter,),{,int,Identifier,    ;return;}    用 inner_var_declare ->int,Identifier,进行归约, goto[ 27 , auto ]= 31 , 入栈
+13    0,1,2,6,10,13,15,21,25,27,31,    #,N,int,Identifier,M,A,(,parameter,),{,inner_var_declare,    ;return;}    action[ 31 , auto ]= 43 , 状态 43 入栈
+14    0,1,2,6,10,13,15,21,25,27,31,43,    #,N,int,Identifier,M,A,(,parameter,),{,inner_var_declare,;,    return;}    用 inner_declare ->进行归约, goto[ 43 , short ]= 58 , 入栈
+15    0,1,2,6,10,13,15,21,25,27,31,43,58,    #,N,int,Identifier,M,A,(,parameter,),{,inner_var_declare,;,inner_declare,    return;}    用 inner_declare ->inner_var_declare,;,inner_declare,进行归约, goto[ 27 , short ]= 30 , 入栈
+16    0,1,2,6,10,13,15,21,25,27,30,    #,N,int,Identifier,M,A,(,parameter,),{,inner_declare,    return;}    action[ 30 , short ]= 34 , 状态 34 入栈
+17    0,1,2,6,10,13,15,21,25,27,30,34,    #,N,int,Identifier,M,A,(,parameter,),{,inner_declare,return,    ;}    action[ 34 , auto ]= 48 , 状态 48 入栈
+18    0,1,2,6,10,13,15,21,25,27,30,34,48,    #,N,int,Identifier,M,A,(,parameter,),{,inner_declare,return,;,    }    用 return_sentence ->return,;,进行归约, goto[ 30 , [ ]= 39 , 入栈
+19    0,1,2,6,10,13,15,21,25,27,30,39,    #,N,int,Identifier,M,A,(,parameter,),{,inner_declare,return_sentence,    }    用 sentence ->return_sentence,进行归约, goto[ 30 , [ ]= 40 , 入栈
+20    0,1,2,6,10,13,15,21,25,27,30,40,    #,N,int,Identifier,M,A,(,parameter,),{,inner_declare,sentence,    }    用 sentence_list ->sentence,进行归约, goto[ 30 , [ ]= 41 , 入栈
+21    0,1,2,6,10,13,15,21,25,27,30,41,    #,N,int,Identifier,M,A,(,parameter,),{,inner_declare,sentence_list,    }    action[ 41 , [ ]= 57 , 状态 57 入栈
+22    0,1,2,6,10,13,15,21,25,27,30,41,57,    #,N,int,Identifier,M,A,(,parameter,),{,inner_declare,sentence_list,},    NUL    用 sentence_block ->{,inner_declare,sentence_list,},进行归约, goto[ 25 , Null ]= 28 , 入栈
+23    0,1,2,6,10,13,15,21,25,28,    #,N,int,Identifier,M,A,(,parameter,),sentence_block,    NUL    用 function_declare ->(,parameter,),sentence_block,进行归约, goto[ 13 , Null ]= 16 , 入栈
+24    0,1,2,6,10,13,16,    #,N,int,Identifier,M,A,function_declare,    NUL    用 declare ->int,Identifier,M,A,function_declare,进行归约, goto[ 1 , Null ]= 4 , 入栈
+25    0,1,4,    #,N,declare,    NUL    用 declare_list ->declare,进行归约, goto[ 1 , Null ]= 5 , 入栈
+26    0,1,5,    #,N,declare_list,    NUL    acc!

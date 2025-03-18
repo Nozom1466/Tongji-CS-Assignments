@@ -1,0 +1,12 @@
+int int
+main Identifier
+( (
+void void
+) )
+{ {
+int int
+a Identifier
+; ;
+return return
+; ;
+} }

@@ -1,0 +1,106 @@
+[terminal]
+break continue
+char int float
+if else while
+* / + - < > = <= >= != && || ==
+( ) [ ] { } ' ; $
+ID INT FLOAT CHAR
+
+[variable]
+program_
+program
+main_declaration
+type_specifier
+compound_statement
+declaration_list
+declaration_type
+statement_list
+statement
+expression_statement
+expression
+assignment_expression
+unary_expression
+logical_or_expression
+logical_and_expression
+equality_expression
+relational_expression
+additive_expression
+multiplicative_expression
+iteration_statement
+jump_statement
+selection_statement
+
+[production]
+[0] program_ -> program
+[1] program -> main_declaration
+[2] program -> declaration_list main_declaration
+[3] main_declaration -> type_specifier ID ( ) compound_statement
+[4] type_specifier -> char
+[5] type_specifier -> int
+[6] type_specifier -> float
+
+[7] compound_statement -> { }
+[8] compound_statement -> { declaration_list }
+[9] compound_statement -> { statement_list }
+[10] compound_statement -> { declaration_list statement_list }
+
+[11] declaration_list -> declaration_type
+[12] declaration_list -> declaration_list declaration_type
+
+[13] declaration_type -> type_specifier ID ;
+
+[14] statement_list -> statement
+[15] statement_list -> statement_list statement
+
+[16] statement -> compound_statement
+[17] statement -> expression_statement 
+[18] statement -> iteration_statement 
+[19] statement -> jump_statement 
+[20] statement -> selection_statement
+
+[21] expression_statement -> ;
+[22] expression_statement -> expression ;
+
+[23] expression -> assignment_expression
+
+[24] assignment_expression -> ID = assignment_expression
+[25] assignment_expression -> logical_or_expression
+
+[26] logical_or_expression -> logical_and_expression
+[27] logical_or_expression -> logical_or_expression || logical_and_expression
+
+[28] logical_and_expression -> equality_expression
+[29] logical_and_expression -> logical_and_expression && equality_expression
+
+[30] equality_expression -> relational_expression
+[31] equality_expression -> equality_expression == relational_expression
+[32] equality_expression -> equality_expression != relational_expression
+
+[33] relational_expression -> additive_expression
+[34] relational_expression -> relational_expression < additive_expression
+[35] relational_expression -> relational_expression > additive_expression
+[36] relational_expression -> relational_expression <= additive_expression
+[37] relational_expression -> relational_expression >= additive_expression
+
+[38] additive_expression -> multiplicative_expression
+[39] additive_expression -> additive_expression + multiplicative_expression
+[40] additive_expression -> additive_expression - multiplicative_expression
+
+[41] multiplicative_expression -> unary_expression
+[42] multiplicative_expression -> multiplicative_expression * unary_expression
+[43] multiplicative_expression -> multiplicative_expression / unary_expression
+
+[44] unary_expression -> ID
+[45] unary_expression -> INT
+[46] unary_expression -> FLOAT
+[47] unary_expression -> CHAR
+[48] unary_expression -> ( logical_or_expression )
+
+[49] iteration_statement -> while ( expression ) compound_statement
+
+[50] jump_statement -> continue ;
+[51] jump_statement -> break ;
+
+[52] selection_statement -> if ( expression ) statement
+[53] selection_statement -> if ( expression ) statement else statement
+ 
